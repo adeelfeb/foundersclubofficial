@@ -1,33 +1,40 @@
-import { Poppins } from 'next/font/google'
+import { Poppins, Cormorant_Garamond } from 'next/font/google'
 import '../styles/globals.css'
 
-const poppins = Poppins({ 
+const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['300', '400', '500', '600', '700'],
+})
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-serif',
+  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata = {
-  title: 'NBA Games | Upcoming NBA Schedule, Scores & Standings',
-  description: 'Stay up to date with the latest NBA games. View upcoming schedule, scores, team records, venues, and broadcast channels. Mobile-friendly and always updated.',
-  keywords: 'NBA, basketball, schedule, scores, games, standings',
+  title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
+  description: 'The Modern Day Members Only Community. For Founders and Entrepreneurs focused on Mind, Body, and Business.',
+  keywords: 'founders club, entrepreneurs, private network, membership, mastermind',
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'NBA Games | Upcoming NBA Schedule, Scores & Standings',
-    description: 'Stay up to date with the latest NBA games. View upcoming schedule, scores, team records, venues, and broadcast channels.',
-    siteName: 'NBA Games',
+    title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
+    description: 'The Modern Day Members Only Community. For Founders and Entrepreneurs focused on Mind, Body, and Business.',
+    siteName: 'Founders Club',
     type: 'website',
   },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className={`${poppins.className} antialiased bg-slate-900`}>
+    <html lang="en" className={`${poppins.variable} ${cormorant.variable}`} suppressHydrationWarning>
+      <body className={`${poppins.className} antialiased bg-forest-800`} suppressHydrationWarning>
         {children}
       </body>
     </html>

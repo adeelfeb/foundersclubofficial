@@ -9,7 +9,11 @@
   --secondary-color: #666;
   --border-color: #eaeaea;
   --background-color: #fafafa;
-  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --forest-800: #1e3d30;
+  --forest-700: #2a4d3d;
+  --gold-500: #D4AF37;
+  --gold-300: #d6c39b;
 }
 
 html {

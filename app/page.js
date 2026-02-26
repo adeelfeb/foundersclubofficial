@@ -1,33 +1,35 @@
 import Navbar from '../components/designndev/Navbar'
-import NBAHero from '../components/designndev/NBAHero'
-import NBAGamesList from '../components/designndev/NBAGamesList'
-import ContactForm from '../components/designndev/ContactForm'
+import FoundersClubHero from '../components/designndev/FoundersClubHero'
+import StatsSection from '../components/designndev/StatsSection'
+import PartnershipOpportunities from '../components/designndev/PartnershipOpportunities'
+import VettedForImpact from '../components/designndev/VettedForImpact'
+import TestimonialsSection from '../components/designndev/TestimonialsSection'
+import PartnershipFormSection from '../components/designndev/PartnershipFormSection'
 import Footer from '../components/designndev/Footer'
 
 export const metadata = {
-  title: 'NBA Games | Upcoming NBA Schedule, Scores & Standings',
-  description: 'Stay up to date with the latest NBA games. View upcoming schedule, scores, team records, venues, and broadcast channels. Mobile-friendly and always updated.',
-  keywords: 'NBA, basketball, schedule, scores, games, standings, ESPN',
+  title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
+  description: 'The Modern Day Members Only Community. Partnership opportunities and direct access to an exclusive network of Forbes-listed founders and over $20B in assets under management.',
+  keywords: 'founders club, entrepreneurs, private network, membership, mastermind, partnership',
   openGraph: {
-    title: 'NBA Games | Upcoming NBA Schedule, Scores & Standings',
-    description: 'Stay up to date with the latest NBA games. View upcoming schedule, scores, team records, venues, and broadcast channels.',
-    url: 'https://nba-games.example.com',
-    siteName: 'NBA Games',
+    title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
+    description: 'The Modern Day Members Only Community. For Founders and Entrepreneurs focused on Mind, Body, and Business.',
+    url: 'https://foundersclubofficial.com',
+    siteName: 'Founders Club',
     type: 'website',
   },
 }
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-900">
+    <main className="min-h-screen bg-forest-800">
       <Navbar />
-      <NBAHero />
-      <div id="games">
-        <NBAGamesList />
-      </div>
-      <div className="bg-slate-50">
-        <ContactForm />
-      </div>
+      <FoundersClubHero />
+      <StatsSection />
+      <PartnershipOpportunities />
+      <VettedForImpact />
+      <TestimonialsSection />
+      <PartnershipFormSection />
       <Footer />
     </main>
   )

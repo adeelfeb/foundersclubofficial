@@ -20,9 +20,28 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
+        forest: {
+          950: '#0f1f18',
+          900: '#1a3329',
+          800: '#1e3d30',
+          700: '#2a4d3d',
+          600: '#2d5a47',
+          500: '#2C443C',
+          400: '#3d6b54',
+        },
+        gold: {
+          100: '#f5f0e6',
+          200: '#e8dfc9',
+          300: '#d6c39b',
+          400: '#c9b896',
+          500: '#D4AF37',
+          600: '#b8962e',
+          700: '#9a7b26',
+        },
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'Poppins', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'Cambria', 'serif'],
       },
       keyframes: {
         shimmer: {
@@ -45,6 +64,9 @@ module.exports = {
       },
       backgroundSize: {
         'shimmer': '200% 100%',
+      },
+      backgroundImage: {
+        'footer-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E\")",
       },
     },
   },
