@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="flex items-center justify-center gap-2 mb-12 md:mb-16"
         >
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gold-500 text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-semibold text-gold-500 text-center">
             What Members Are Saying
           </h2>
           <Quote className="w-8 h-8 text-gold-500/60 flex-shrink-0" />
@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
               className="fc-card p-6 flex flex-col"
             >
                 <div className="w-12 h-12 rounded-full bg-gold-500/20 flex items-center justify-center mb-4 flex-shrink-0">
-                <span className="font-serif text-lg font-semibold text-gold-500">
+                <span className="font-subheading text-lg font-semibold text-gold-500">
                   {t.name.charAt(0)}
                 </span>
               </div>

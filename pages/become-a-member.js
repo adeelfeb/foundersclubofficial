@@ -53,7 +53,7 @@ export default function BecomeAMemberPage() {
           />
           <div className="absolute inset-0 bg-forest-950/65" aria-hidden />
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
               Become a Member
             </h1>
             <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -68,10 +68,10 @@ export default function BecomeAMemberPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
 
             <section className="mb-20">
-              <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-8">
+              <h2 className="font-heading text-3xl font-semibold text-gold-500 text-center mb-8">
                 Why Join The Founders Club?
               </h2>
-              <h3 className="font-serif text-2xl font-semibold text-gold-300 text-center mb-6">
+              <h3 className="font-subheading text-2xl font-semibold text-gold-300 text-center mb-6">
                 A Private Network For Proven Entrepreneurs
               </h3>
               <p className="text-gold-100/90 text-center max-w-2xl mx-auto mb-6 leading-relaxed">
@@ -91,19 +91,19 @@ export default function BecomeAMemberPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <div className="bg-forest-700/50 border border-forest-600 rounded-xl p-6 text-center">
-                  <h4 className="font-serif text-xl font-semibold text-gold-400 mb-3">Mind</h4>
+                  <h4 className="font-subheading text-xl font-semibold text-gold-400 mb-3">Mind</h4>
                   <p className="text-gold-100/80 text-sm leading-relaxed">
                     A space for founders to think clearly, share openly, and learn the real lessons behind success—not just the wins, but the losses too. Growth here begins with the right perspective.
                   </p>
                 </div>
                 <div className="bg-forest-700/50 border border-forest-600 rounded-xl p-6 text-center">
-                  <h4 className="font-serif text-xl font-semibold text-gold-400 mb-3">Body</h4>
+                  <h4 className="font-subheading text-xl font-semibold text-gold-400 mb-3">Body</h4>
                   <p className="text-gold-100/80 text-sm leading-relaxed">
                     Health is the ultimate leverage. Members challenge one another to train, recover, and live with discipline because how you move through life reflects how you lead.
                   </p>
                 </div>
                 <div className="bg-forest-700/50 border border-forest-600 rounded-xl p-6 text-center">
-                  <h4 className="font-serif text-xl font-semibold text-gold-400 mb-3">Business</h4>
+                  <h4 className="font-subheading text-xl font-semibold text-gold-400 mb-3">Business</h4>
                   <p className="text-gold-100/80 text-sm leading-relaxed">
                     From scaling strategies to shared deal flow, members exchange playbooks, capital, and opportunities that drive momentum in real time.
                   </p>
@@ -112,19 +112,19 @@ export default function BecomeAMemberPage() {
             </section>
 
             <section className="mb-20">
-              <h2 className="font-serif text-2xl font-semibold text-gold-400 text-center mb-8">
+              <h2 className="font-heading text-2xl font-semibold text-gold-400 text-center mb-8">
                 Member Insights & Impact
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 {stats.map((s) => (
                   <div key={s.label} className="text-center">
-                    <div className="font-serif text-3xl font-semibold text-gold-400">{s.value}</div>
+                    <div className="font-heading text-3xl font-semibold text-gold-400">{s.value}</div>
                     <div className="text-gold-100/80 text-sm">{s.label}</div>
                   </div>
                 ))}
               </div>
 
-              <h2 className="font-serif text-2xl font-semibold text-gold-400 text-center mb-6">
+              <h2 className="font-heading text-2xl font-semibold text-gold-400 text-center mb-6">
                 Membership Overview
               </h2>
               <p className="text-gold-200/90 font-semibold text-center mb-4">Access to:</p>
@@ -141,7 +141,7 @@ export default function BecomeAMemberPage() {
             </section>
 
             <section className="mb-20">
-              <h2 className="font-serif text-2xl font-semibold text-gold-400 text-center mb-6">
+              <h2 className="font-heading text-2xl font-semibold text-gold-400 text-center mb-6">
                 Am I a Fit?
               </h2>
               <p className="text-gold-100/90 text-center mb-6 max-w-2xl mx-auto">
@@ -158,7 +158,7 @@ export default function BecomeAMemberPage() {
             </section>
 
             <section className="mb-16">
-              <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-8">
+              <h2 className="font-heading text-3xl font-semibold text-gold-500 text-center mb-8">
                 Ready to Join The Founders Club?
               </h2>
             </section>

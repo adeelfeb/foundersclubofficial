@@ -130,7 +130,7 @@ export default function Reviews() {
           transition={{ duration: 0.7 }}
           className="text-center mb-8"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Client Reviews
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -157,7 +157,7 @@ export default function Reviews() {
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900">
+                        <h3 className="font-subheading text-lg font-semibold text-gray-900">
                           {review.name}
                         </h3>
                         <p className="text-sm text-gray-500 mt-1">

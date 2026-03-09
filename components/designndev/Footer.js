@@ -23,7 +23,7 @@ export default function Footer() {
                   height={34}
                   className="h-8 w-auto object-contain"
                 />
-                <span className="font-serif text-xl md:text-2xl font-semibold text-gold-500 ml-2 hidden sm:inline">FOUNDERS CLUB</span>
+                <span className="font-heading text-xl md:text-2xl font-semibold text-gold-500 ml-2 hidden sm:inline">FOUNDERS CLUB</span>
               </Link>
             </div>
             <div className="flex flex-wrap gap-10 md:gap-12">

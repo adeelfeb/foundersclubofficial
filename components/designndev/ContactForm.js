@@ -72,7 +72,7 @@ export default function ContactForm({ showHeading = true }) {
             transition={{ duration: 0.7 }}
             className="text-center mb-8"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Get In Touch
             </h2>
             <p className="text-base sm:text-lg text-gray-600 px-1">

@@ -605,6 +605,7 @@ export default function Dashboard({ user }) {
           }
 
           .section-title {
+            font-family: var(--font-heading);
             font-size: clamp(1.9rem, 3.5vw, 2.35rem);
             font-weight: 600;
             color: #0f172a;
@@ -666,6 +667,7 @@ export default function Dashboard({ user }) {
           }
 
           .section-card h2 {
+            font-family: var(--font-subheading);
             font-size: 1.1rem;
             font-weight: 600;
             color: #0f172a;
@@ -695,6 +697,7 @@ export default function Dashboard({ user }) {
           }
 
           .section-list-title {
+            font-family: var(--font-subheading);
             font-size: 1rem;
             font-weight: 600;
             color: #0f172a;

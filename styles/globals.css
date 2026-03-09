@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom fonts: Luxerie (headings), Dragon-Serial (subheadings) */
+@font-face {
+  font-family: 'Luxerie';
+  src: url('/fonts/luxerie-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dragon-Serial';
+  src: url('/fonts/Dragon-Serial-Regular.otf') format('opentype'),
+       url('/fonts/Dragon-Serial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Global Styles */
 
 :root {
@@ -10,6 +28,8 @@
   --border-color: #eaeaea;
   --background-color: #fafafa;
   --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Luxerie', var(--font-serif), Georgia, Cambria, serif;
+  --font-subheading: 'Dragon-Serial', var(--font-serif), Georgia, Cambria, serif;
   /* Founders Club – match client site */
   --fc-forest-950: #010704;
   --fc-forest-800: #1a2e26;
@@ -39,6 +59,18 @@ body {
   font-family: var(--font-poppins), 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings: Luxerie Regular */
+h1, h2,
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Subheadings: Dragon-Serial Regular */
+h3, h4, h5, h6,
+.font-subheading {
+  font-family: var(--font-subheading);
 }
 
 a {

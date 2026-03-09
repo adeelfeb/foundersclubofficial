@@ -172,6 +172,7 @@ export default function Modal({
 
         .modal-title {
           margin: 0;
+          font-family: var(--font-heading);
           font-size: 1.5rem;
           font-weight: 700;
           color: #0f172a;

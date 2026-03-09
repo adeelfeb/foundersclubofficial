@@ -30,7 +30,7 @@ export default function NominatePage() {
         <Navbar />
         <main className="pt-24 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
               Founders Club Nomination Program
             </h1>
             <p className="text-gold-100/90 text-lg text-center max-w-2xl mx-auto mb-8 leading-relaxed">
@@ -42,7 +42,7 @@ export default function NominatePage() {
               </Link>
             </div>
 
-            <p className="text-gold-200/90 font-serif text-xl text-center mb-4">
+            <p className="text-gold-200/90 font-subheading text-xl text-center mb-4">
               You don&apos;t just belong here. You help define what this is.
             </p>
             <p className="text-gold-100/90 text-center text-lg mb-12 max-w-2xl mx-auto">
@@ -59,7 +59,7 @@ export default function NominatePage() {
               With people who bring clarity, character, and the courage to build what actually matters.
             </p>
 
-            <h2 className="font-serif text-2xl font-semibold text-gold-400 text-center mb-8">
+            <h2 className="font-heading text-2xl font-semibold text-gold-400 text-center mb-8">
               Your Nomination Is a Vote
             </h2>
             <p className="text-gold-100/90 text-center mb-16 max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ export default function NominatePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {benefits.map((b) => (
                 <div key={b.count} className="bg-forest-700/60 border border-forest-600 rounded-xl p-6 md:p-8">
-                  <div className="font-serif text-3xl font-semibold text-gold-400 mb-2">{b.count} {b.title}</div>
+                  <div className="font-heading text-3xl font-semibold text-gold-400 mb-2">{b.count} {b.title}</div>
                   <div className="font-semibold text-gold-200 mb-3">{b.reward}</div>
                   <p className="text-gold-100/80 leading-relaxed">{b.description}</p>
                 </div>
@@ -77,7 +77,7 @@ export default function NominatePage() {
             </div>
 
             <section className="bg-forest-700/40 border border-forest-600 rounded-xl p-6 md:p-8 text-center">
-              <h2 className="font-serif text-2xl font-semibold text-gold-400 mb-4">
+              <h2 className="font-heading text-2xl font-semibold text-gold-400 mb-4">
                 Submit a Nomination
               </h2>
               <p className="text-gold-100/90 mb-6">

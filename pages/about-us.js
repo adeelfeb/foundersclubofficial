@@ -121,7 +121,7 @@ export default function AboutUsPage() {
           />
           <div className="absolute inset-0 bg-forest-950/60" aria-hidden />
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
               About Us
             </h1>
             <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -138,8 +138,8 @@ export default function AboutUsPage() {
                 <section key={section.id} className="border-t border-forest-600/50 pt-12">
                   <div className={`grid grid-cols-1 gap-8 ${index % 2 === 1 ? 'md:grid-cols-2' : 'md:grid-cols-2'} md:gap-10 items-center`}>
                     <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                      <span className="text-gold-500/80 font-serif text-lg">{section.id}</span>
-                      <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-300 mt-2 mb-6">
+                      <span className="text-gold-500/80 font-subheading text-lg">{section.id}</span>
+                      <h2 className="font-heading text-2xl md:text-3xl font-semibold text-gold-300 mt-2 mb-6">
                         {section.title}
                       </h2>
                       <div className="text-gold-100/90 leading-relaxed whitespace-pre-line">
@@ -161,7 +161,7 @@ export default function AboutUsPage() {
                 </section>
               ))}
             <section className="mt-20 pt-12 border-t border-forest-600/50">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
+              <h2 className="font-heading text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
                 Where We&apos;re Headed
               </h2>
               <p className="text-gold-100/90 text-lg leading-relaxed mb-8">
@@ -170,7 +170,7 @@ export default function AboutUsPage() {
               <p className="text-gold-100/80 leading-relaxed mb-10">
                 From startup to exit, from solo founder to seasoned operator, this is where you belong. You&apos;ve done the work. Now it&apos;s time to grow with people who get it.
               </p>
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
+              <h2 className="font-heading text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
                 Apply to Join The Club
               </h2>
               <p className="text-gold-100/90 mb-6">

@@ -6,6 +6,7 @@ export default function Document() {
       <Head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="preload" href="/fonts/luxerie-regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

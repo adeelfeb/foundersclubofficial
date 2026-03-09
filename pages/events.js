@@ -60,7 +60,7 @@ export default function EventsPage() {
           />
           <div className="absolute inset-0 bg-forest-950/60" aria-hidden />
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
               Events
             </h1>
             <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -78,15 +78,15 @@ export default function EventsPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
               <div className="text-center">
-                <div className="font-serif text-4xl font-semibold text-gold-500 mb-2">150+</div>
+                <div className="font-heading text-4xl font-semibold text-gold-500 mb-2">150+</div>
                 <div className="text-gold-100/80 text-sm">Member-only events annually</div>
               </div>
               <div className="text-center">
-                <div className="font-serif text-4xl font-semibold text-gold-500 mb-2">10,000+</div>
+                <div className="font-heading text-4xl font-semibold text-gold-500 mb-2">10,000+</div>
                 <div className="text-gold-100/80 text-sm">Total attendees across all experiences</div>
               </div>
               <div className="text-center">
-                <div className="font-serif text-xl font-semibold text-gold-500 mb-2">Worldwide</div>
+                <div className="font-subheading text-xl font-semibold text-gold-500 mb-2">Worldwide</div>
                 <div className="text-gold-100/80 text-sm">Rooted in the U.S. and Canada, our members gather from around the world through high-impact chapters in New York, Miami, Los Angeles, Toronto, and beyond.</div>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function EventsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {eventTypes.map((event) => (
                 <div key={event.title} className="bg-forest-700/50 border border-forest-600 rounded-xl p-6">
-                  <h3 className="font-serif text-xl font-semibold text-gold-300 mb-3">{event.title}</h3>
+                  <h3 className="font-subheading text-xl font-semibold text-gold-300 mb-3">{event.title}</h3>
                   <p className="text-gold-100/80 leading-relaxed">{event.description}</p>
                 </div>
               ))}
@@ -108,7 +108,7 @@ export default function EventsPage() {
             </p>
 
             <section className="text-center pt-8 border-t border-forest-600/50">
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
+              <h2 className="font-heading text-2xl md:text-3xl font-semibold text-gold-500 mb-4">
                 Apply to Join The Club
               </h2>
               <p className="text-gold-100/90 mb-6 max-w-xl mx-auto">

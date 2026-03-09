@@ -20,6 +20,7 @@
 .heading h3 {
   margin: 0;
   font-size: 1.5rem;
+  font-family: var(--font-subheading);
   word-wrap: break-word;
 }
 .primaryCta {

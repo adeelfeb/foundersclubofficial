@@ -21,7 +21,7 @@ export default function ContactPage() {
         <Navbar />
         <main className="relative z-10 pt-24 pb-20">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
               Let&apos;s Chat
             </h1>
             <p className="text-gold-100/90 text-lg text-center max-w-2xl mx-auto mb-12 leading-relaxed">

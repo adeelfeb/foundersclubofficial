@@ -338,7 +338,7 @@ export default function LoginPage() {
         <Navbar />
         <main className="relative z-10 pt-24 pb-20">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-4">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-4">
               Member Login
             </h1>
             <p className="text-gold-100/90 text-lg">

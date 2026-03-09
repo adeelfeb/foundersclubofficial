@@ -46,6 +46,7 @@
 }
 
 .blogsHeroTitle {
+  font-family: var(--font-heading);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
@@ -219,6 +220,7 @@
 }
 
 .blogCardTitle {
+  font-family: var(--font-subheading);
   font-size: 1.5rem;
   font-weight: 700;
   color: #0f172a;
@@ -331,6 +333,7 @@
 }
 
 .blogsEmptyTitle {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
   color: #0f172a;
@@ -403,6 +406,7 @@
 }
 
 .blogDetailTitle {
+  font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   color: #0f172a;
@@ -451,6 +455,7 @@
 }
 
 .blogDetailContentBody h2 {
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 700;
   color: #0f172a;
@@ -459,6 +464,7 @@
 }
 
 .blogDetailContentBody h3 {
+  font-family: var(--font-subheading);
   font-size: 1.5rem;
   font-weight: 700;
   color: #0f172a;

@@ -52,7 +52,7 @@ export default function PartnershipsPage() {
           />
           <div className="absolute inset-0 bg-forest-950/65" aria-hidden />
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
               Our Founders Run The World&apos;s Best Brands
             </h1>
             <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -65,20 +65,20 @@ export default function PartnershipsPage() {
         </section>
         <main className="pb-0">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-            <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-12">
+            <h2 className="font-heading text-3xl font-semibold text-gold-500 text-center mb-12">
               Partnership Opportunities
             </h2>
             <div className="space-y-12 mb-20">
               {opportunities.map((opp) => (
                 <div key={opp.title} className="bg-forest-700/50 border border-forest-600 rounded-xl p-6 md:p-8">
-                  <h3 className="font-serif text-xl md:text-2xl font-semibold text-gold-300 mb-4">{opp.title}</h3>
+                  <h3 className="font-subheading text-xl md:text-2xl font-semibold text-gold-300 mb-4">{opp.title}</h3>
                   <p className="text-gold-100/80 leading-relaxed">{opp.description}</p>
                 </div>
               ))}
             </div>
 
             <section className="mb-20">
-              <h2 className="font-serif text-3xl font-semibold text-gold-500 text-center mb-6">
+              <h2 className="font-heading text-3xl font-semibold text-gold-500 text-center mb-6">
                 Partnership Philosophy
               </h2>
               <p className="text-gold-100/90 text-center max-w-3xl mx-auto mb-8 leading-relaxed">

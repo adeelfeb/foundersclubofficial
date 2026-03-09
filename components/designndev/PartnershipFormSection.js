@@ -95,7 +95,7 @@ export default function PartnershipFormSection() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gold-500 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-gold-500 mb-4">
             Explore a Strategic Partnership
           </h2>
           <p className="text-gold-100/80 text-base md:text-lg">

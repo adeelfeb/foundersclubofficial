@@ -35,7 +35,7 @@ export default function PartnershipOpportunities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-serif text-3xl md:text-4xl font-semibold text-gold-500 text-center mb-12 md:mb-16"
+          className="font-heading text-3xl md:text-4xl font-semibold text-gold-500 text-center mb-12 md:mb-16"
         >
           Partnership Opportunities
         </motion.h2>
@@ -53,7 +53,7 @@ export default function PartnershipOpportunities() {
                 <div className="p-2 rounded-lg bg-gold-400/10 text-gold-400">
                   <item.Icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-gold-200">
+                <h3 className="font-subheading text-xl font-semibold text-gold-200">
                   {item.title}
                 </h3>
               </div>

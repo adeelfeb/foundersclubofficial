@@ -21,7 +21,7 @@ export default function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-serif text-2xl md:text-3xl font-semibold text-gold-500 mb-12 md:mb-16"
+          className="font-heading text-2xl md:text-3xl font-semibold text-gold-500 mb-12 md:mb-16"
         >
           Member Insights & Impact
         </motion.h2>
@@ -35,7 +35,7 @@ export default function StatsSection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="text-center"
             >
-              <div className="font-serif text-4xl md:text-5xl font-semibold text-gold-500 mb-2">
+              <div className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-2">
                 {stat.value}
               </div>
               <div className="text-gold-100/80 text-sm md:text-base">
