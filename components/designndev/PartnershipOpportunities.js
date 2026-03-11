@@ -28,14 +28,14 @@ const opportunities = [
 
 export default function PartnershipOpportunities() {
   return (
-    <section className="py-16 md:py-24 bg-forest-800">
+    <section className="py-16 md:py-24 bg-forest-800 section-divider-gold">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="section-heading font-heading text-3xl md:text-4xl font-medium text-gold-500 text-left mb-12 md:mb-16 normal-case"
+          className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 text-left mb-12 md:mb-16 normal-case"
         >
           Partnership Opportunities
         </motion.h2>

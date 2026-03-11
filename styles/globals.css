@@ -61,6 +61,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Header: very thin golden bottom line with glow (do not override position) */
+.nav-gold-line {
+  box-shadow: 0 1px 0 0 rgba(212, 175, 55, 0.5), 0 2px 20px 0 rgba(212, 175, 55, 0.2);
+}
+
 /* Headings: Luxerie Regular – preserve title case (no all-caps) */
 h1, h2,
 .font-heading {
@@ -72,6 +77,12 @@ h1, h2,
 main .section-heading {
   font-family: var(--font-serif), Georgia, Cambria, serif !important;
   text-transform: none !important;
+}
+
+/* Thin golden divider line with glow between sections */
+.section-divider-gold {
+  border-top: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 -1px 0 0 rgba(212, 175, 55, 0.4), 0 -2px 16px 0 rgba(212, 175, 55, 0.15);
 }
 
 /* Subheadings: Dragon-Serial Regular */

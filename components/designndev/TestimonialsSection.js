@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-heading font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
+          className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
         >
           Reviews From Clients
         </motion.h2>

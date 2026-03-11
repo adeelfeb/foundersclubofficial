@@ -15,7 +15,7 @@ export default function PracticeAreasSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="section-heading font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
+          className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
         >
           Practice Areas
         </motion.h2>
