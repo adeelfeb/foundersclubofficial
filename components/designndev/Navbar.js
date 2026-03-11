@@ -58,7 +58,7 @@ export default function Navbar() {
   ]
 
   const linkClass = (href) =>
-    `px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-200 no-underline ${
+    `nav-link-glow px-3 py-2 text-base font-medium tracking-wide transition-all duration-200 no-underline ${
       isActive(href)
         ? 'text-gold-400'
         : 'text-white/90 hover:text-white'
@@ -72,7 +72,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/40 backdrop-blur-sm nav-gold-line"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between py-0">
           {/* Logo – larger size */}
           <Link
             href="/"
@@ -141,7 +141,7 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`block py-3 px-3 text-sm font-medium rounded-lg no-underline ${isActive(item.href) ? 'text-gold-400' : 'text-white/90 hover:text-white'}`}
+                  className={`nav-link-glow block py-3 px-3 text-base font-medium rounded-lg no-underline ${isActive(item.href) ? 'text-gold-400' : 'text-white/90 hover:text-white'}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

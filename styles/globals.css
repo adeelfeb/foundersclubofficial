@@ -66,6 +66,15 @@ body {
   box-shadow: 0 1px 0 0 rgba(212, 175, 55, 0.5), 0 2px 20px 0 rgba(212, 175, 55, 0.2);
 }
 
+/* Header nav links: minor glow on hover */
+.nav-link-glow {
+  text-shadow: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.nav-link-glow:hover {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
 /* Headings: Luxerie Regular – preserve title case (no all-caps) */
 h1, h2,
 .font-heading {
