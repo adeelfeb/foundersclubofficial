@@ -1,7 +1,6 @@
 import Navbar from '../components/designndev/Navbar'
 import FoundersClubHero from '../components/designndev/FoundersClubHero'
 import PracticeAreasSection from '../components/designndev/PracticeAreasSection'
-import StatsSection from '../components/designndev/StatsSection'
 import PartnershipOpportunities from '../components/designndev/PartnershipOpportunities'
 import VettedForImpact from '../components/designndev/VettedForImpact'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
@@ -23,14 +22,12 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-forest-800">
+    <main className="min-h-screen bg-forest-800 bg-gradient-forest">
       <Navbar />
-      {/* Narrower content on phone for better readability */}
-      <div className="w-full max-w-[420px] sm:max-w-none mx-auto sm:mx-0">
+      <div className="w-full mx-auto">
         <FoundersClubHero />
         <PracticeAreasSection />
         <VettedForImpact />
-        <StatsSection />
         <PartnershipOpportunities />
         <TestimonialsSection />
         <PartnershipFormSection />

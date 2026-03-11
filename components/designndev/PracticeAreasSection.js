@@ -9,17 +9,17 @@ export default function PracticeAreasSection() {
 
   return (
     <section id="practice-areas" className="py-16 md:py-24 bg-forest-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-12 md:mb-16"
+          className="section-heading font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
         >
           Practice Areas
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {areas.map((item, i) => (
             <motion.div
               key={item.title}
@@ -27,7 +27,7 @@ export default function PracticeAreasSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative aspect-square w-full overflow-hidden rounded-xl fc-card border border-forest-600/80"
+              className="group relative aspect-[4/5] min-h-[280px] sm:min-h-[320px] w-full overflow-hidden fc-card border border-forest-600/80"
             >
               <div className="absolute inset-0">
                 <Image
@@ -38,14 +38,14 @@ export default function PracticeAreasSection() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              {/* Dark green overlay – matches design, slightly transparent so image shows */}
+              {/* Lighter overlay so images stay bright – only over text area */}
               <div
-                className="absolute inset-0 bg-forest-900/70 transition-opacity duration-300 group-hover:bg-forest-900/60"
+                className="absolute inset-0 bg-forest-900/35 transition-opacity duration-300 group-hover:bg-forest-900/25"
                 aria-hidden
               />
-              {/* Subtle gradient at bottom for label readability */}
+              {/* Gradient only at bottom for label readability */}
               <div
-                className="absolute inset-0 bg-gradient-to-t from-forest-950/90 via-transparent to-transparent"
+                className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-forest-950/75 via-forest-950/20 to-transparent"
                 aria-hidden
               />
               <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6">

@@ -21,7 +21,7 @@ export default function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-heading text-2xl md:text-3xl font-medium text-gold-500 mb-12 md:mb-16"
+          className="section-heading font-heading text-2xl md:text-3xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
         >
           Member Insights & Impact
         </motion.h2>

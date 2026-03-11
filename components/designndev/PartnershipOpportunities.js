@@ -35,7 +35,7 @@ export default function PartnershipOpportunities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-heading text-3xl md:text-4xl font-medium text-gold-500 text-center mb-12 md:mb-16"
+          className="section-heading font-heading text-3xl md:text-4xl font-medium text-gold-500 text-left mb-12 md:mb-16 normal-case"
         >
           Partnership Opportunities
         </motion.h2>

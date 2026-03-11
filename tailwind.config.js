@@ -20,24 +20,25 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
-        // Founders Club – match client site (dark forest + gold/cream)
+        // Founders Club – vibrant forest + gold with gradient-friendly shades
         forest: {
-          950: '#010704',
-          900: '#0f1f18',
-          800: '#1a2e26',
-          700: '#1e3d30',
-          600: '#2a4d3d',
-          500: '#2C443C',
-          400: '#3d6b54',
+          950: '#020c08',
+          900: '#0d261c',
+          800: '#1a3328',
+          700: '#1e4234',
+          600: '#255540',
+          500: '#2d6b52',
+          400: '#3d8a6a',
+          350: '#4a9d7a',
         },
         gold: {
-          50: '#F7F0DE',
-          100: '#f5f0e6',
-          200: '#e8dfc9',
-          300: '#d6c39b',
-          400: '#c9a227',
-          500: '#D4AF37',
-          600: '#b8962e',
+          50: '#FBF6E8',
+          100: '#F7F0DE',
+          200: '#EDE2C4',
+          300: '#E2CF9E',
+          400: '#D4AF37',
+          500: '#C9A227',
+          600: '#B8962e',
           700: '#9a7b26',
         },
       },
@@ -53,8 +54,15 @@ module.exports = {
         'fc-xl': '1rem',
       },
       boxShadow: {
-        'fc-gold': '0 1px 3px rgba(212, 175, 55, 0.15)',
-        'fc-gold-md': '0 4px 12px rgba(212, 175, 55, 0.2)',
+        'fc-gold': '0 1px 3px rgba(212, 175, 55, 0.2)',
+        'fc-gold-md': '0 4px 16px rgba(212, 175, 55, 0.28)',
+        'fc-gold-lg': '0 6px 24px rgba(201, 162, 39, 0.25)',
+      },
+      backgroundImage: {
+        'gradient-gold': 'linear-gradient(135deg, #F7F0DE 0%, #E2CF9E 40%, #D4AF37 100%)',
+        'gradient-forest': 'linear-gradient(180deg, #1a3328 0%, #1e4234 50%, #255540 100%)',
+        'gradient-gold-subtle': 'linear-gradient(180deg, rgba(247,240,222,0.12) 0%, rgba(212,175,55,0.06) 100%)',
+        'footer-pattern': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='24' viewBox='0 0 56 24'%3E%3Cpath fill='%23D4AF37' fill-opacity='0.12' fill-rule='evenodd' d='M0 8h8V4h8V0h8v4h8v4h8v8h-8v4h-8v4h-8v-4H8v-4H0V8zm16 0v4h8V8h-8zm16 4v4h8v-4h-8z'/%3E%3C/svg%3E\")",
       },
       keyframes: {
         shimmer: {
@@ -79,11 +87,7 @@ module.exports = {
         'shimmer': '200% 100%',
         'texture': 'auto',
       },
-      backgroundImage: {
-        'footer-pattern': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='24' viewBox='0 0 56 24'%3E%3Cpath fill='%23D4AF37' fill-opacity='0.07' fill-rule='evenodd' d='M0 8h8V4h8V0h8v4h8v4h8v8h-8v4h-8v4h-8v-4H8v-4H0V8zm16 0v4h8V8h-8zm16 4v4h8v-4h-8z'/%3E%3C/svg%3E\")",
-      },
     },
   },
   plugins: [],
 }
-

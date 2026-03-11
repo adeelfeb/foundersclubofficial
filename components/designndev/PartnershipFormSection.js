@@ -93,9 +93,9 @@ export default function PartnershipFormSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-left mb-10"
         >
-            <h2 className="font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-4">
+            <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-4 normal-case">
             Explore a Strategic Partnership
           </h2>
           <p className="text-gold-100/80 text-base md:text-lg">
@@ -225,7 +225,7 @@ export default function PartnershipFormSection() {
               disabled={isSubmitting}
               whileHover={!isSubmitting ? { scale: 1.01 } : {}}
               whileTap={!isSubmitting ? { scale: 0.99 } : {}}
-              className="w-full py-4 px-6 font-medium text-forest-950 bg-gold-500 border border-gold-500 rounded-lg hover:bg-gold-400 hover:border-gold-400 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
+              className="w-full py-4 px-6 font-medium text-forest-950 bg-gold-500 border-2 border-gold-400 rounded-none hover:bg-gold-400 hover:border-gold-300 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
             >
               {isSubmitting ? (
                 <>
@@ -233,7 +233,7 @@ export default function PartnershipFormSection() {
                   <span>Submitting…</span>
                 </>
               ) : (
-                'SUBMIT PARTNERSHIP REQUEST'
+                'Submit partnership request'
               )}
             </motion.button>
             <AnimatePresence mode="wait">

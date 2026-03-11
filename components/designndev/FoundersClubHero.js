@@ -32,16 +32,16 @@ export default function FoundersClubHero() {
         className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/90 from-20% via-black/70 via-50% to-transparent"
         aria-hidden
       />
-      {/* Subtle gold tint */}
+      {/* Subtle gold tint – vibrant gradient */}
       <div
-        className="absolute inset-0 w-full h-full opacity-30 pointer-events-none"
+        className="absolute inset-0 w-full h-full opacity-40 pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(ellipse 70% 80% at 25% 50%, rgba(212,175,55,0.12) 0%, transparent 55%)',
+          backgroundImage: 'radial-gradient(ellipse 70% 80% at 25% 50%, rgba(212,175,55,0.22) 0%, rgba(201,162,39,0.08) 45%, transparent 60%)',
         }}
         aria-hidden
       />
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left pt-2">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}

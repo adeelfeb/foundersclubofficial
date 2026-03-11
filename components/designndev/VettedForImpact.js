@@ -16,7 +16,7 @@ export default function VettedForImpact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-6">
+            <h2 className="section-heading font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-6 text-left normal-case">
               About Us
             </h2>
             <p className="text-gold-200 font-medium text-lg mb-4">

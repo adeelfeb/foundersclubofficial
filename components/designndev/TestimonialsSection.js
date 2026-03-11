@@ -51,15 +51,15 @@ export default function TestimonialsSection() {
           priority={false}
         />
       </div>
-      <div className="absolute inset-0 bg-forest-900/75" aria-hidden />
-      <div className="absolute inset-0 bg-forest-800/50" aria-hidden />
+      <div className="absolute inset-0 bg-forest-900/55" aria-hidden />
+      <div className="absolute inset-0 bg-forest-800/40" aria-hidden />
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-12 md:mb-16"
+          className="section-heading font-heading text-3xl md:text-4xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
         >
           Reviews From Clients
         </motion.h2>

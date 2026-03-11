@@ -37,14 +37,10 @@ function useRouterCompat() {
 export default function Navbar() {
   const router = useRouterCompat()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     setIsMounted(true)
-    const handleScroll = () => setIsScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const isActive = (href) => {
@@ -55,15 +51,17 @@ export default function Navbar() {
   }
 
   const navItems = [
-    { href: '/', label: 'HOME' },
-    { href: '/practice-areas', label: 'PRACTICE AREAS' },
-    { href: '/about-us', label: 'ABOUT US' },
-    { href: '/contact', label: 'CONTACT' },
+    { href: '/', label: 'Home' },
+    { href: '/practice-areas', label: 'Practice areas' },
+    { href: '/about-us', label: 'About us' },
+    { href: '/contact', label: 'Contact' },
   ]
 
   const linkClass = (href) =>
     `px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-200 no-underline ${
-      isActive(href) ? 'text-gold-600' : 'text-forest-800 hover:text-forest-950'
+      isActive(href)
+        ? 'text-gold-400'
+        : 'text-white/90 hover:text-white'
     }`
 
   return (
@@ -71,15 +69,11 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-md border-b border-neutral-200'
-          : 'bg-white border-b border-neutral-100'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/40 backdrop-blur-sm border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo only – stands out on white */}
+        <div className="flex items-center justify-between h-20 md:h-24">
+          {/* Logo – larger size */}
           <Link
             href="/"
             className="flex items-center no-underline hover:opacity-90 transition-opacity"
@@ -87,9 +81,9 @@ export default function Navbar() {
             <Image
               src={foundersClubImages.logo}
               alt="Sahail Law"
-              width={160}
-              height={52}
-              className="h-11 w-auto md:h-12 object-contain"
+              width={300}
+              height={100}
+              className="h-16 w-auto md:h-20 lg:h-[5.5rem] xl:h-24 object-contain"
             />
           </Link>
 
@@ -110,7 +104,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="btn-fc-primary"
             >
-              GET A FREE CONSULTATION
+              Get a free consultation
             </a>
           </div>
 
@@ -118,7 +112,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-forest-800 hover:text-forest-950 rounded-lg transition-colors"
+            className="lg:hidden p-2 text-white hover:text-gold-200 rounded-lg transition-colors"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
           >
@@ -140,29 +134,29 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden overflow-hidden bg-white border-t border-neutral-200"
+            className="lg:hidden overflow-hidden bg-black/85 backdrop-blur-md border-t border-white/10"
           >
             <div className="px-4 py-4 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`block py-3 px-3 text-sm font-medium rounded-lg no-underline ${linkClass(item.href)}`}
+                  className={`block py-3 px-3 text-sm font-medium rounded-lg no-underline ${isActive(item.href) ? 'text-gold-400' : 'text-white/90 hover:text-white'}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-4 border-t border-neutral-200">
-                <a
-                  href="https://wa.me/13654995551"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-fc-primary w-full text-center rounded-md block"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  GET A FREE CONSULTATION
-                </a>
+              <div className="pt-4 border-t border-white/10">
+          <a
+              href="https://wa.me/13654995551"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fc-primary w-full text-center block"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Get a free consultation
+            </a>
               </div>
             </div>
           </motion.div>
