@@ -38,8 +38,8 @@ export default function Services() {
   ]
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,11 +47,11 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-4 normal-case">
             Our Services
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive web development solutions tailored to your business needs
+          </h1>
+          <p className="text-gold-100/90 text-lg max-w-2xl mx-auto font-subheading">
+            Comprehensive solutions tailored to your business needs
           </p>
         </motion.div>
 
@@ -65,15 +65,15 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-white rounded-2xl p-8 border border-gray-200 hover:border-transparent hover:shadow-2xl transition-all duration-300"
+                className="group bg-forest-700/50 border border-forest-600 rounded-none p-8 hover:border-gold-400/50 transition-all duration-300"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-none flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300`}>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="font-subheading text-xl font-semibold text-gold-300 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gold-100/80 leading-relaxed font-subheading">
                   {service.description}
                 </p>
               </motion.div>

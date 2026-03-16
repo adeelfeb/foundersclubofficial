@@ -2,28 +2,24 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import { Loader2 } from 'lucide-react'
-import Link from 'next/link'
+import { Loader2, ChevronRight } from 'lucide-react'
 import { useRecaptcha } from '../../utils/useRecaptcha'
 import { safeParseJsonResponse } from '../../utils/safeJsonResponse'
 
 export default function LetsChatForm() {
   const { execute: executeRecaptcha, isAvailable: recaptchaAvailable } = useRecaptcha()
   const [formData, setFormData] = useState({
-    name: '',
-    businessName: '',
     email: '',
-    phone: '',
+    name: '',
+    telephone: '',
     message: '',
-    consentTransactional: false,
-    consentMarketing: false,
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target
-    setFormData((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }))
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
     if (submitStatus) setSubmitStatus(null)
   }
 
@@ -37,7 +33,12 @@ export default function LetsChatForm() {
     setIsSubmitting(true)
     setSubmitStatus(null)
     try {
-      const payload = { name: formData.name.trim(), email: formData.email.trim() }
+      const payload = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        telephone: formData.telephone.trim(),
+        message: formData.message.trim(),
+      }
       if (recaptchaToken) payload.recaptchaToken = recaptchaToken
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -47,7 +48,7 @@ export default function LetsChatForm() {
       const data = await safeParseJsonResponse(response)
       if (response.ok) {
         setSubmitStatus({ type: 'success', message: data.message || 'Thank you! We will get back to you soon.' })
-        setFormData({ name: '', businessName: '', email: '', phone: '', message: '', consentTransactional: false, consentMarketing: false })
+        setFormData({ email: '', name: '', telephone: '', message: '' })
       } else {
         setSubmitStatus({ type: 'error', message: data.message || 'Something went wrong. Please try again.' })
       }
@@ -68,52 +69,69 @@ export default function LetsChatForm() {
           <div className="absolute inset-0 rounded-2xl bg-forest-800/60 backdrop-blur-sm z-10 pointer-events-auto" aria-hidden />
         )}
         <div>
-          <label htmlFor="letschat-name" className={labelClass}>Name</label>
-          <input type="text" id="letschat-name" name="name" value={formData.name} onChange={handleChange} required className={inputClass} placeholder="Your name" />
+          <label htmlFor="letschat-email" className={labelClass}>Email Address *</label>
+          <input
+            type="email"
+            id="letschat-email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className={inputClass}
+            placeholder="Example: info@gmail.com"
+          />
         </div>
         <div>
-          <label htmlFor="letschat-business" className={labelClass}>Business Name</label>
-          <input type="text" id="letschat-business" name="businessName" value={formData.businessName} onChange={handleChange} className={inputClass} placeholder="Company or brand" />
+          <label htmlFor="letschat-name" className={labelClass}>Full Name *</label>
+          <input
+            type="text"
+            id="letschat-name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className={inputClass}
+            placeholder="Example: John Doe"
+          />
         </div>
         <div>
-          <label htmlFor="letschat-email" className={labelClass}>Email Address</label>
-          <input type="email" id="letschat-email" name="email" value={formData.email} onChange={handleChange} required className={inputClass} placeholder="you@company.com" />
+          <label htmlFor="letschat-telephone" className={labelClass}>Telephone *</label>
+          <input
+            type="tel"
+            id="letschat-telephone"
+            name="telephone"
+            value={formData.telephone}
+            onChange={handleChange}
+            required
+            className={inputClass}
+            placeholder="+43 232 232 56"
+          />
         </div>
         <div>
-          <label htmlFor="letschat-phone" className={labelClass}>Phone Number</label>
-          <input type="tel" id="letschat-phone" name="phone" value={formData.phone} onChange={handleChange} className={inputClass} placeholder="+1 (555) 000-0000" />
+          <label htmlFor="letschat-message" className={labelClass}>Message *</label>
+          <textarea
+            id="letschat-message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows={4}
+            className={`${inputClass} resize-y min-h-[100px]`}
+            placeholder="Type additional information which will help us to contact you."
+          />
         </div>
-        <div>
-          <label htmlFor="letschat-message" className={labelClass}>Message</label>
-          <textarea id="letschat-message" name="message" value={formData.message} onChange={handleChange} rows={4} className={`${inputClass} resize-y min-h-[100px]`} placeholder="Your message..." />
-        </div>
-        <div className="space-y-3">
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input type="checkbox" name="consentTransactional" checked={formData.consentTransactional} onChange={handleChange} className="mt-1 rounded border-forest-600 bg-forest-700 text-gold-500 focus:ring-gold-500/50" />
-            <span className="text-gold-100/80 text-sm">
-              I consent to transactional messages (e.g. appointment reminders, order confirmations). Message &amp; data rates may apply. Reply HELP for help or STOP to opt-out.
-            </span>
-          </label>
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input type="checkbox" name="consentMarketing" checked={formData.consentMarketing} onChange={handleChange} className="mt-1 rounded border-forest-600 bg-forest-700 text-gold-500 focus:ring-gold-500/50" />
-            <span className="text-gold-100/80 text-sm">
-              I consent to marketing messages (offers, updates). Message &amp; data rates may apply. Reply HELP for help or STOP to opt-out.
-            </span>
-          </label>
-        </div>
-        <p className="text-gold-100/60 text-xs">
-          <Link href="/privacy-policy" className="text-gold-400/80 hover:text-gold-400 no-underline">Terms &amp; Conditions</Link>
-          {' · '}
-          <Link href="/privacy-policy" className="text-gold-400/80 hover:text-gold-400 no-underline">Privacy Policy</Link>
-        </p>
         <motion.button
           type="submit"
           disabled={isSubmitting}
           whileHover={!isSubmitting ? { scale: 1.01 } : {}}
           whileTap={!isSubmitting ? { scale: 0.99 } : {}}
-          className="w-full py-4 px-6 font-semibold text-forest-950 bg-gold-500 border border-gold-500 rounded-lg hover:bg-gold-400 hover:border-gold-400 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
+          className="w-full py-2.5 px-4 text-sm font-medium text-forest-950 bg-gold-500 border border-gold-500 rounded-lg hover:bg-gold-400 hover:border-gold-400 transition-all flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
         >
-          {isSubmitting ? <><Loader2 className="w-5 h-5 animate-spin" /> Submitting…</> : 'Submit'}
+          {isSubmitting ? (
+            <><Loader2 className="w-4 h-4 animate-spin" /> Submitting…</>
+          ) : (
+            <>Send Request <ChevronRight className="w-4 h-4" /></>
+          )}
         </motion.button>
         <AnimatePresence mode="wait">
           {submitStatus && (

@@ -12,20 +12,22 @@ function useRouterCompat() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setPathname(window.location.pathname)
-      const handleRouteChange = () => setPathname(window.location.pathname)
-      window.addEventListener('popstate', handleRouteChange)
+      const scheduleUpdate = () => {
+        queueMicrotask(() => setPathname(window.location.pathname))
+      }
+      window.addEventListener('popstate', scheduleUpdate)
       const op = history.pushState
       const or = history.replaceState
       history.pushState = function (...args) {
         op.apply(history, args)
-        handleRouteChange()
+        scheduleUpdate()
       }
       history.replaceState = function (...args) {
         or.apply(history, args)
-        handleRouteChange()
+        scheduleUpdate()
       }
       return () => {
-        window.removeEventListener('popstate', handleRouteChange)
+        window.removeEventListener('popstate', scheduleUpdate)
         history.pushState = op
         history.replaceState = or
       }
@@ -60,7 +62,7 @@ export default function Navbar() {
   ]
 
   const linkClass = (href) =>
-    `nav-link-glow px-3 py-2 text-base font-medium tracking-wide transition-all duration-200 no-underline ${
+    `nav-link-glow font-heading px-3 py-2 text-lg font-semibold tracking-wide transition-all duration-200 no-underline ${
       isActive(href)
         ? 'text-gold-400'
         : 'text-white/90 hover:text-white'
@@ -104,7 +106,7 @@ export default function Navbar() {
               href="https://wa.me/13654995551"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-fc-primary"
+              className="btn-fc-primary font-heading"
             >
               Get a free consultation
             </a>
@@ -143,22 +145,22 @@ export default function Navbar() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`nav-link-glow block py-3 px-3 text-base font-medium rounded-lg no-underline ${isActive(item.href) ? 'text-gold-400' : 'text-white/90 hover:text-white'}`}
+                  className={`nav-link-glow font-heading block py-3 px-3 text-lg font-semibold rounded-lg no-underline ${isActive(item.href) ? 'text-gold-400' : 'text-white/90 hover:text-white'}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
               <div className="pt-4 border-t border-white/10">
-          <a
-              href="https://wa.me/13654995551"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-fc-primary w-full text-center block"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Get a free consultation
-            </a>
+<a
+            href="https://wa.me/13654995551"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fc-primary font-heading w-full text-center block"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Get a free consultation
+          </a>
               </div>
             </div>
           </motion.div>

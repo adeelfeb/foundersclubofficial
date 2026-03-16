@@ -37,7 +37,7 @@ export default function PartnershipOpportunities() {
           transition={{ duration: 0.6 }}
           className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 text-left mb-12 md:mb-16 normal-case"
         >
-          Partnership Opportunities
+          <span className="text-white">Partnership</span> Opportunities
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {opportunities.map((item, i) => (

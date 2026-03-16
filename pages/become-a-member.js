@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
+import TextureOverlay from '../components/designndev/TextureOverlay'
 import { foundersClubImages } from '../lib/foundersClubImages'
 
 const stats = [
@@ -38,7 +39,8 @@ export default function BecomeAMemberPage() {
         <meta name="description" content="Join The Founders Club: 1,000+ peers across North America and Canada, over $20 billion in combined revenue. Apply for membership." />
         <meta name="keywords" content="Founders Club, become a member, apply, membership" />
       </Head>
-      <div className="min-h-screen bg-forest-800">
+      <div className="relative min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
+        <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
         <Navbar />
         {/* Hero with full-bleed background */}
         <section className="relative min-h-[50vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
@@ -53,10 +55,10 @@ export default function BecomeAMemberPage() {
           />
           <div className="absolute inset-0 bg-forest-950/65" aria-hidden />
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6">
+            <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 normal-case">
               Become a Member
             </h1>
-            <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed font-subheading">
               Members gain access to a network of 1,000+ peers across North America and Canada, representing over $20 billion in combined revenue, who have built, scaled, and exited global brands.
             </p>
             <Link href="/signup" className="btn-fc-primary">

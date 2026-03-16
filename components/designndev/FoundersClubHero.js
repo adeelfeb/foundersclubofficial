@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { SiWhatsapp } from 'react-icons/si'
+import TextureOverlay from './TextureOverlay'
 
 // Professional background video – replace with your own when ready (e.g. /video/hero.mp4)
 const HERO_VIDEO_SRC = 'https://assets.mixkit.co/videos/9236/9236-720.mp4'
@@ -33,6 +34,8 @@ export default function FoundersClubHero() {
         className="absolute inset-0 w-full h-full bg-gradient-to-r from-black/90 from-20% via-black/70 via-50% to-transparent"
         aria-hidden
       />
+      {/* Same texture as rest of site (subtle on hero) */}
+      <TextureOverlay opacity={0.05} className="mix-blend-overlay" />
       {/* Subtle gold tint – vibrant gradient */}
       <div
         className="absolute inset-0 w-full h-full opacity-40 pointer-events-none"

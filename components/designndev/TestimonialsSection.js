@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
         >
-          Reviews From Clients
+          <span className="text-white">Reviews</span> From Clients
         </motion.h2>
 
         <div className="relative min-h-[220px] flex items-center justify-center">

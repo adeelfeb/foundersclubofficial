@@ -9,7 +9,7 @@ import { requireRecaptcha } from '../../lib/recaptcha';
 /**
  * Contact form endpoint
  * POST /api/contact
- * Body: { "name": "John Doe", "email": "john@example.com", "recaptchaToken"?: "..." }
+ * Body: { "name", "email", "telephone"?, "message"?, "recaptchaToken"? }
  */
 export default async function handler(req, res) {
   if (await applyCors(req, res)) return;
@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   const ok = await requireRecaptcha(req, res, jsonError);
   if (!ok) return;
 
-  const { name, email } = req.body || {};
+  const { name, email, telephone, message } = req.body || {};
 
   // Validation
   if (!name || !email) {
@@ -31,6 +31,8 @@ export default async function handler(req, res) {
 
   const nameStr = typeof name === 'string' ? name.trim() : '';
   const emailStr = typeof email === 'string' ? email.trim().toLowerCase() : '';
+  const telephoneStr = typeof telephone === 'string' ? telephone.trim() : '';
+  const messageStr = typeof message === 'string' ? message.trim() : '';
   if (!nameStr || !emailStr) {
     return jsonError(res, 400, 'Name and email are required');
   }
@@ -42,7 +44,15 @@ export default async function handler(req, res) {
 
   try {
     const subject = `New Contact Form Submission from ${nameStr}`;
-    
+    const extraRows = [
+      telephoneStr && `<p><strong>Telephone:</strong> ${telephoneStr}</p>`,
+      messageStr && `<p><strong>Message:</strong></p><p>${messageStr.replace(/\n/g, '<br>')}</p>`,
+    ].filter(Boolean).join('');
+    const extraText = [
+      telephoneStr && `Telephone: ${telephoneStr}`,
+      messageStr && `Message:\n${messageStr}`,
+    ].filter(Boolean).join('\n\n');
+
     const htmlBody = `
       <!DOCTYPE html>
       <html>
@@ -56,6 +66,7 @@ export default async function handler(req, res) {
           <h2 style="color: #333; margin-top: 0;">New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${nameStr}</p>
           <p><strong>Email:</strong> ${emailStr}</p>
+          ${extraRows}
           <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
           <p style="font-size: 12px; color: #777;">This is an automated message from the contact form on designndev.com</p>
         </div>
@@ -68,7 +79,7 @@ New Contact Form Submission
 
 Name: ${nameStr}
 Email: ${emailStr}
-
+${extraText ? '\n' + extraText + '\n' : ''}
 ---
 This is an automated message from the contact form on designndev.com
     `;

@@ -9,26 +9,27 @@ export default function PracticeAreasSection() {
 
   return (
     <section id="practice-areas" className="py-16 md:py-24 bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
-      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-12 md:mb-16 text-left normal-case"
+          className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-10 md:mb-14 text-left normal-case"
         >
-          Practice Areas
+          <span className="text-white">Practice</span> Areas
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {areas.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative aspect-[4/5] min-h-[280px] sm:min-h-[320px] w-full overflow-hidden fc-card border border-forest-600/80"
+              transition={{ duration: 0.5, delay: i * 0.06 }}
+              className="group relative aspect-[4/5] min-h-[260px] sm:min-h-[300px] w-full overflow-hidden rounded-lg border border-forest-600/60 transition-all duration-300 hover:border-gold-400/90 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.5),0_0_20px_rgba(212,175,55,0.15)]"
             >
+              {/* Background image */}
               <div className="absolute inset-0">
                 <Image
                   src={item.image}
@@ -38,20 +39,33 @@ export default function PracticeAreasSection() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              {/* Lighter overlay so images stay bright – only over text area */}
+              {/* Default lighter overlay – title readable at bottom */}
               <div
-                className="absolute inset-0 bg-forest-900/35 transition-opacity duration-300 group-hover:bg-forest-900/25"
+                className="absolute inset-0 bg-forest-900/30 transition-colors duration-300 group-hover:bg-forest-900/75"
                 aria-hidden
               />
-              {/* Gradient only at bottom for label readability */}
+              {/* Gradient at bottom for label readability */}
               <div
-                className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-forest-950/75 via-forest-950/20 to-transparent"
+                className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-forest-950/80 via-forest-950/25 to-transparent transition-opacity duration-300 group-hover:from-forest-950/95 group-hover:via-forest-950/90"
                 aria-hidden
               />
-              <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6">
-                <h3 className="font-subheading text-lg md:text-xl font-medium text-gold-50 drop-shadow-sm">
-                  {item.title}
-                </h3>
+              {/* Content – title always visible; intro + description fade in on hover */}
+              <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5">
+                <div className="flex flex-col gap-1.5">
+                  {item.intro && (
+                    <p className="text-gold-200/90 text-xs md:text-sm font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      {item.intro}
+                    </p>
+                  )}
+                  <h3 className="font-subheading text-lg md:text-xl font-medium text-gold-50 drop-shadow-sm">
+                    {item.title}
+                  </h3>
+                  {item.description && (
+                    <p className="text-gold-100/95 text-sm leading-relaxed mt-1 line-clamp-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      {item.description}
+                    </p>
+                  )}
+                </div>
               </div>
             </motion.div>
           ))}

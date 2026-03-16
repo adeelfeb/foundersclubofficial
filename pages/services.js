@@ -1,38 +1,27 @@
-import Head from 'next/head';
-import Navbar from '../components/designndev/Navbar';
-import Footer from '../components/designndev/Footer';
-import Services from '../components/designndev/Services';
+import Head from 'next/head'
+import Navbar from '../components/designndev/Navbar'
+import Footer from '../components/designndev/Footer'
+import Services from '../components/designndev/Services'
+import TextureOverlay from '../components/designndev/TextureOverlay'
 
 export default function ServicesPage() {
   return (
     <>
       <Head>
-        <title>Services | Design n Dev - Full-Stack Web Development Solutions</title>
-        <meta 
-          name="description" 
-          content="Comprehensive web development services including custom full-stack development, Next.js solutions, CMS development, e-commerce platforms, and API integrations. Expert MERN Stack development." 
-        />
-        <meta 
-          name="keywords" 
-          content="web development services, full-stack development, Next.js development, MERN stack, e-commerce development, CMS development, WordPress, Webflow, API integration" 
-        />
-        <meta property="og:title" content="Services | Design n Dev" />
-        <meta 
-          property="og:description" 
-          content="Comprehensive web development services tailored to your business needs." 
-        />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://designndev.com/services" />
+        <title>Services | Founders Club</title>
+        <meta name="description" content="Explore how we support founders and entrepreneurs. Practice areas and services from The Founders Club." />
+        <meta name="keywords" content="Founders Club, services, practice areas, entrepreneurship" />
       </Head>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep relative">
+        <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
         <Navbar />
-        <main>
+        <main className="relative z-10 pb-20">
           <Services />
         </main>
         <Footer />
       </div>
     </>
-  );
+  )
 }
 
 

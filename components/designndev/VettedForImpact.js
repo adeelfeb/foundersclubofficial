@@ -17,7 +17,7 @@ export default function VettedForImpact() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-6 text-left normal-case">
-              About Us
+              <span className="text-white">About</span> Us
             </h2>
             <p className="text-gold-200 font-medium text-lg mb-4">
               At Sahail Law, we believe the law should empower—not overwhelm.

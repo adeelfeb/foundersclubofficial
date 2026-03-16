@@ -34,8 +34,8 @@ export default function Footer() {
 
             {/* Menu */}
             <div>
-              <h4 className="font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Menu</h4>
-              <ul className="space-y-2 text-sm">
+              <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Menu</h4>
+              <ul className="space-y-2 text-sm font-subheading">
                 <li><Link href="/about-us" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About Us</Link></li>
                 <li><Link href="/our-team" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Team</Link></li>
                 <li><Link href="/contact" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Contact Us</Link></li>
@@ -45,8 +45,8 @@ export default function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Services</h4>
-              <ul className="space-y-2 text-sm">
+              <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Services</h4>
+              <ul className="space-y-2 text-sm font-subheading">
                 {services.map((s) => (
                   <li key={s.label}>
                     <Link href={s.href} className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
@@ -59,8 +59,8 @@ export default function Footer() {
 
             {/* Get in touch */}
             <div>
-              <h4 className="font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Get in touch</h4>
-              <ul className="space-y-2 text-sm">
+              <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Get in touch</h4>
+              <ul className="space-y-2 text-sm font-subheading">
                 <li>
                   <a href="mailto:info@sahailaw.ca" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
                     info@sahailaw.ca
@@ -80,7 +80,7 @@ export default function Footer() {
 
       <section className="py-3 md:py-4 border-t border-forest-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gold-200/60 text-xs">
+          <p className="text-center text-gold-200/60 text-xs font-subheading">
             © {currentYear} Founders Club. All rights reserved.
           </p>
         </div>

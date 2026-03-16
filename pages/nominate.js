@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
+import TextureOverlay from '../components/designndev/TextureOverlay'
 
 const benefits = [
   {
@@ -26,14 +27,15 @@ export default function NominatePage() {
         <meta name="description" content="The Founders Club Nomination Program empowers you to shape the future of the club. Nominate up to five founders per year." />
         <meta name="keywords" content="Founders Club, nominate, referral, nomination program" />
       </Head>
-      <div className="min-h-screen bg-forest-800">
+      <div className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep relative">
+        <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
         <Navbar />
-        <main className="pt-24 pb-20">
+        <main className="pt-24 pb-20 relative z-10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center">
+            <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 text-center normal-case">
               Founders Club Nomination Program
             </h1>
-            <p className="text-gold-100/90 text-lg text-center max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="text-gold-100/90 text-lg text-center max-w-2xl mx-auto mb-8 leading-relaxed font-subheading">
               We&apos;ve retired the referral program. Because this isn&apos;t about casual invites — it&apos;s about legacy. And legacy is built one extraordinary founder at a time.
             </p>
             <div className="text-center mb-16">

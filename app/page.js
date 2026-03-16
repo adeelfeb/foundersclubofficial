@@ -6,6 +6,7 @@ import VettedForImpact from '../components/designndev/VettedForImpact'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
 import PartnershipFormSection from '../components/designndev/PartnershipFormSection'
 import Footer from '../components/designndev/Footer'
+import TextureOverlay from '../components/designndev/TextureOverlay'
 
 export const metadata = {
   title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
@@ -22,9 +23,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
+    <main className="relative min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
+      <TextureOverlay />
       <Navbar />
-      <div className="w-full mx-auto">
+      <div className="relative w-full mx-auto">
         <FoundersClubHero />
         <PracticeAreasSection />
         <VettedForImpact />
