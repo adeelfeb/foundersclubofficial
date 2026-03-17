@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function VettedForImpact() {
   return (
-    <section id="about" className="py-16 md:py-24 border-t border-forest-700/50 relative">
+    <section id="about" className="py-16 md:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

@@ -50,7 +50,7 @@ const items = [
 
 export default function IconBoxSection() {
   return (
-    <section className="py-12 md:py-16 border-t border-forest-700/50 relative">
+    <section className="py-12 md:py-16 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row flex-wrap items-stretch justify-center gap-8 md:gap-10 lg:gap-12">
           {items.map((item, i) => (
@@ -62,10 +62,10 @@ export default function IconBoxSection() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="flex flex-shrink-0 items-center gap-4 md:gap-5"
             >
-              <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 text-gold-400" aria-hidden>
+              <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 text-gold-400" aria-hidden>
                 {item.icon}
               </div>
-              <h3 className="font-subheading text-lg md:text-xl font-semibold text-gold-200">
+              <h3 className="font-subheading text-xl md:text-2xl font-semibold text-gold-200">
                 {item.title}
               </h3>
             </motion.div>
