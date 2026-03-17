@@ -2,7 +2,6 @@ import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import FreeConsultationSection from '../../components/designndev/FreeConsultationSection'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
-import { foundersClubImages } from '../../lib/foundersClubImages'
 
 export const metadata = {
   title: 'Contact Us | Founders Club',
@@ -15,18 +14,8 @@ export default function ContactPage() {
     <main className="relative min-h-screen">
       <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
       <Navbar />
-      <section className="relative min-h-[45vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full bg-no-repeat bg-center"
-          style={{
-            backgroundImage: `url(${foundersClubImages.aboutCta})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-          aria-hidden
-        />
-        <div className="absolute inset-0 bg-forest-950/60" aria-hidden />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative min-h-[30vh] flex items-center justify-center pt-32 pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 normal-case">
             Let&apos;s Chat
           </h1>
@@ -35,7 +24,7 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-      <div className="relative z-10 pb-20">
+      <div className="pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
           <FreeConsultationSection animated={false} />
         </div>

@@ -1,6 +1,7 @@
 import Navbar from '../components/designndev/Navbar'
 import FoundersClubHero from '../components/designndev/FoundersClubHero'
 import PracticeAreasSection from '../components/designndev/PracticeAreasSection'
+import IconBoxSection from '../components/designndev/IconBoxSection'
 import PartnershipOpportunities from '../components/designndev/PartnershipOpportunities'
 import VettedForImpact from '../components/designndev/VettedForImpact'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
@@ -29,6 +30,7 @@ export default function Home() {
       <div className="relative w-full mx-auto">
         <FoundersClubHero />
         <PracticeAreasSection />
+        <IconBoxSection />
         <VettedForImpact />
         <PartnershipOpportunities />
         <TestimonialsSection />

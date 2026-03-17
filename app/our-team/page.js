@@ -1,9 +1,7 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
-import { foundersClubImages } from '../../lib/foundersClubImages'
 
 const team = [
   { name: 'Sahail', role: 'Founder & Lead Counsel', bio: 'Focused on making legal services clear and accessible. Experienced in corporate, real estate, and estate planning.' },
@@ -23,20 +21,8 @@ export default function OurTeamPage() {
     <main className="relative min-h-screen">
       <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
       <Navbar />
-      <section className="relative min-h-[45vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src={foundersClubImages.membersGroup}
-            alt=""
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-forest-950/70" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-900 via-transparent to-transparent" aria-hidden />
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative min-h-[30vh] flex items-center justify-center pt-32 pb-16">
+        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 normal-case drop-shadow-lg mb-4">
             Our Team
           </h1>
