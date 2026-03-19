@@ -118,7 +118,7 @@ export default function Navbar() {
                   alt="Founders Club"
                   width={280}
                   height={94}
-                  className="h-24 w-auto sm:h-[4.25rem] md:h-[4.5rem] lg:h-20 xl:h-24 object-contain"
+                  className="h-[5.5rem] w-auto sm:h-16 md:h-[4rem] lg:h-[4.5rem] xl:h-[5.5rem] object-contain"
                   priority
                 />
               </Link>
