@@ -43,16 +43,31 @@ const iconTailored = (
 )
 
 const items = [
-  { icon: iconClientCentric, title: 'Client-Centric Approach' },
-  { icon: iconTransparent, title: 'Transparent Processes' },
-  { icon: iconTailored, title: 'Tailored Legal Solutions' },
+  {
+    icon: iconClientCentric,
+    title: 'Client First Approach',
+    description:
+      'Your goals are our priority. We take the time to understand your situation and provide personalized legal solutions designed around your needs.',
+  },
+  {
+    icon: iconTransparent,
+    title: 'Trusted Advocacy',
+    description:
+      'We stand firmly by our clients, offering reliable and ethical representation every step of the way.',
+  },
+  {
+    icon: iconTailored,
+    title: 'Strategic Excellence',
+    description:
+      'Every case is handled with a focused strategy, ensuring strong representation and attention to detail.',
+  },
 ]
 
 export default function IconBoxSection() {
   return (
     <section className="py-12 md:py-16 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row flex-wrap items-stretch justify-center gap-8 md:gap-10 lg:gap-12">
+      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {items.map((item, i) => (
             <motion.div
               key={item.title}
@@ -60,14 +75,21 @@ export default function IconBoxSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="flex flex-shrink-0 items-center gap-4 md:gap-5"
+              className="border border-gold-400/25 bg-forest-950/40 p-5 md:p-6 hover:border-gold-400/50 transition-colors duration-300"
             >
-              <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 text-gold-400" aria-hidden>
-                {item.icon}
+              <div className="flex items-start gap-4 md:gap-5">
+                <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 text-gold-400" aria-hidden>
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="font-subheading text-xl md:text-2xl font-semibold text-gold-200 leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm md:text-base text-gold-100/90 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="font-subheading text-xl md:text-2xl font-semibold text-gold-200">
-                {item.title}
-              </h3>
             </motion.div>
           ))}
         </div>
