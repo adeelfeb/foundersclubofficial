@@ -29,8 +29,8 @@ export default function Home() {
       <Navbar />
       <div className="relative w-full mx-auto">
         <FoundersClubHero />
-        <PracticeAreasSection />
         <IconBoxSection />
+        <PracticeAreasSection />
         <VettedForImpact />
         <PartnershipOpportunities />
         <TestimonialsSection />

@@ -65,7 +65,7 @@ const items = [
 
 export default function IconBoxSection() {
   return (
-    <section className="py-12 md:py-16 relative">
+    <section className="py-12 md:py-16 relative bg-gradient-to-b from-forest-900/70 via-forest-950/90 to-black/90">
       <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {items.map((item, i) => (
