@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 export default function VettedForImpact() {
@@ -13,22 +14,30 @@ export default function VettedForImpact() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-6 text-center normal-case">
-            <span className="text-white">About</span> Sahai Law
+          <h2 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-10 md:mb-12 text-left normal-case">
+            At Sahai Law
           </h2>
-          <div className="text-gold-100/90 text-base md:text-lg leading-relaxed lg:grid lg:grid-cols-2 lg:gap-x-10 lg:gap-y-6">
-            <p>
-              At Sahai Law, support is embedded in the way we practice. Our name reflects a clear and ongoing commitment to stand with our clients, provide sound guidance, and deliver advocacy without compromise.
-            </p>
-            <p>
-              We approach every matter with a disciplined and strategic mindset. From the outset, we focus on understanding your objectives, assessing risk, and positioning your case for the strongest possible outcome. Our work is deliberate, precise, and tailored to the complexities of each matter we handle.
-            </p>
-            <p>
-              We believe effective legal representation goes beyond advice. It requires clarity, responsiveness, and a consistent focus on advancing our clients&apos; interests. At Sahai Law, we prioritize communication, attention to detail, and practical solutions that align with your goals.
-            </p>
-            <p className="text-gold-200 font-medium mt-4 lg:mt-2 lg:col-span-2 text-center">
-              Defined by support. Proven through results.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 lg:items-center gap-10">
+            <div className="text-gold-100/90 text-base md:text-lg leading-relaxed space-y-6 font-subheading">
+              <p>
+                At Sahai Law, we believe that quality legal support should be accessible to everyone. That&apos;s why we offer a free, no-obligation case review to help you understand your rights and legal options.
+              </p>
+              <p>
+                Our lawyers are readily available to meet with you and provide clear, practical guidance tailored to your situation. Early legal advice can be crucial in protecting your interests and strengthening your position.
+              </p>
+              <p>
+                Delaying legal advice or relying on incorrect guidance can negatively impact your case. Take the first step with confidence. Contact us today to schedule your confidential, no-obligation consultation with one of our experienced legal professionals.
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-forest-800">
+              <Image
+                src="/images/24.jpg"
+                alt="Sahai Law"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </motion.div>
       </div>
