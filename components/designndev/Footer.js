@@ -73,7 +73,7 @@ function FooterNewsletter() {
           }}
           placeholder="Your email"
           disabled={status === 'loading'}
-          className="flex-1 min-w-0 rounded-lg border border-forest-600 bg-forest-900/80 px-3 py-2.5 text-sm text-gold-50 placeholder:text-gold-200/40 focus:border-gold-400/50 focus:outline-none focus:ring-1 focus:ring-gold-400/30 font-subheading"
+          className="flex-1 min-w-0 rounded-none border border-forest-600 bg-forest-900/80 px-3 py-2.5 text-sm text-gold-50 placeholder:text-gold-200/40 focus:border-gold-400/50 focus:outline-none focus:ring-1 focus:ring-gold-400/30 font-subheading"
         />
         <input
           type="text"
@@ -88,7 +88,7 @@ function FooterNewsletter() {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="shrink-0 rounded-lg bg-gold-500/90 px-4 py-2.5 text-sm font-heading text-forest-950 hover:bg-gold-400 transition-colors disabled:opacity-60"
+          className="shrink-0 rounded-none bg-gold-500/90 px-4 py-2.5 text-sm font-heading text-forest-950 hover:bg-gold-400 transition-colors disabled:opacity-60"
         >
           {status === 'loading' ? '…' : 'Subscribe'}
         </button>
