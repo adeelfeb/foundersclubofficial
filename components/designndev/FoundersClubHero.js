@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { SiWhatsapp } from 'react-icons/si'
+import { FaWhatsapp } from 'react-icons/fa'
 import TextureOverlay from './TextureOverlay'
 
 // Professional background video – replace with your own when ready (e.g. /video/hero.mp4)
@@ -60,8 +60,8 @@ export default function FoundersClubHero() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <Link href="/contact" className="btn-fc-primary text-base px-8 py-3.5 no-underline inline-flex items-center gap-2">
-            <SiWhatsapp className="w-5 h-5 shrink-0 text-gold-600" aria-hidden />
-            Book consultation
+            <FaWhatsapp className="w-5 h-5 shrink-0 text-emerald-700" aria-hidden />
+            BOOK A FREE CALL
           </Link>
         </motion.div>
       </div>

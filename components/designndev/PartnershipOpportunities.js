@@ -5,23 +5,23 @@ import { Calendar, Users, Hexagon, Mic } from 'lucide-react'
 
 const opportunities = [
   {
-    title: 'Event Sponsorship',
-    description: 'Align your brand with premier founder events, from masterminds to our Annual Retreat. Gain visibility and connection with high-growth entrepreneurs.',
+    title: 'Accessible Justice',
+    description: "At Stellar Law Professional Corporation, we believe that quality legal support should be accessible to everyone. That's why we offer a free, no-obligation case review to help you understand your rights and legal options.",
     Icon: Calendar,
   },
   {
-    title: 'Strategic Alliance',
-    description: 'Partner with The Founders Club to co-create value for members—whether through content, programs, or exclusive access to your network.',
+    title: 'Dedicated Support',
+    description: 'Our lawyers are readily available to meet with you and provide clear, practical guidance tailored to your situation. Early legal advice can be crucial in protecting your interests and strengthening your position.',
     Icon: Users,
   },
   {
-    title: 'Preferred Partner Status',
-    description: 'Become a vetted preferred partner and get direct access to our member base for tailored offerings and long-term relationships.',
+    title: 'Act Without Delay',
+    description: 'Delaying legal advice, or relying on incorrect guidance, can negatively impact your case. Take the first step with confidence. Contact us today to schedule your confidential, no-obligation consultation with one of our experienced legal professionals.',
     Icon: Hexagon,
   },
   {
-    title: 'Media Sponsorship',
-    description: 'Support our podcast, newsletter, and digital content. Reach founders where they are and build authority in the ecosystem.',
+    title: 'Results That Matter',
+    description: 'We are committed to delivering results that truly matter. We approach every case with precision, strategy, and dedication to achieve the best possible outcome for our clients.',
     Icon: Mic,
   },
 ]

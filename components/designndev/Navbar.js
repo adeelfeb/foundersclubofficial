@@ -96,14 +96,21 @@ export default function Navbar() {
               </button>
 
               {/* Desktop-only label + quick link */}
-              <div className="hidden lg:flex items-center gap-3 pl-1">
-                <span className="font-subheading text-sm text-white/90 tracking-wide">Menu</span>
-                <Link
-                  href="/our-team"
-                  className="btn-fc-secondary font-heading text-sm py-1.5 px-3.5"
-                >
-                  Our Team
-                </Link>
+              <div className="hidden lg:flex items-center gap-2 pl-3">
+                <div className="flex items-center gap-8">
+                  <Link
+                    href="/about-us"
+                    className="font-heading text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
+                  >
+                    About us
+                  </Link>
+                  <Link
+                    href="/practice-areas"
+                    className="font-heading text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
+                  >
+                    Practice areas
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -116,9 +123,9 @@ export default function Navbar() {
                 <Image
                   src={foundersClubImages.logo}
                   alt="Founders Club"
-                  width={280}
-                  height={94}
-                  className="h-[5.5rem] w-auto sm:h-16 md:h-[4rem] lg:h-[4.5rem] xl:h-[5.5rem] object-contain"
+                  width={128}
+                  height={38}
+                  className="h-7 w-auto sm:h-7 md:h-8 lg:h-9 xl:h-9 object-contain"
                   priority
                 />
               </Link>
@@ -132,7 +139,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4"
               >
-                Get a free consultation
+                Free Consultation
               </a>
             </div>
           </div>
@@ -161,7 +168,7 @@ export default function Navbar() {
                   className="btn-fc-primary font-heading w-full justify-center text-base py-3.5"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Get a free consultation
+                  Free Consultation
                 </a>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-[1200px]">

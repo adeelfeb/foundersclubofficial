@@ -14,7 +14,7 @@ const services = [
 
 /** Matches pre–slim-header navbar logo scale (footer stays slightly more prominent than header) */
 const FOOTER_LOGO_CLASS =
-  'h-24 w-auto sm:h-[4.25rem] md:h-[4.5rem] lg:h-20 xl:h-24 object-contain'
+  'h-8 w-auto sm:h-8 md:h-9 lg:h-9 xl:h-10 object-contain'
 
 function FooterNewsletter() {
   const [email, setEmail] = useState('')
@@ -119,8 +119,8 @@ export default function Footer() {
                 <Image
                   src={foundersClubImages.logo}
                   alt="Founders Club"
-                  width={280}
-                  height={94}
+                  width={128}
+                  height={38}
                   className={FOOTER_LOGO_CLASS}
                 />
               </Link>
