@@ -6,6 +6,7 @@ import PartnershipOpportunities from '../components/designndev/PartnershipOpport
 import VettedForImpact from '../components/designndev/VettedForImpact'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
 import PartnershipFormSection from '../components/designndev/PartnershipFormSection'
+import FaqSection from '../components/designndev/FaqSection'
 import Footer from '../components/designndev/Footer'
 import TextureOverlay from '../components/designndev/TextureOverlay'
 
@@ -34,6 +35,7 @@ export default function Home() {
         <VettedForImpact />
         <PartnershipOpportunities />
         <TestimonialsSection />
+        <FaqSection layout="section" />
         <PartnershipFormSection />
       </div>
       <Footer />
