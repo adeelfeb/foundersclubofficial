@@ -152,23 +152,18 @@ export default function Navbar() {
                 />
                 {/* font-sans: Luxerie has no / broken digit glyphs — body font so numerals render and match color */}
                 <span className="font-sans text-inherit whitespace-nowrap tabular-nums tracking-normal">
-                  <span aria-hidden className="opacity-90">
-                    –{' '}
-                  </span>
                   {whatsappDisplay}
                 </span>
               </a>
               <span
-                className="shrink-0 text-gold-400/80 text-sm font-light px-1 sm:px-1.5 select-none [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]"
+                className="inline-block shrink-0 w-px h-5 md:h-6 self-center bg-gold-400/85 rounded-full [box-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
                 aria-hidden
-              >
-                |
-              </span>
+              />
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-fc-primary font-heading text-sm whitespace-nowrap shrink-0 !py-1.5 px-4"
+                className="btn-fc-primary font-heading text-sm whitespace-nowrap shrink-0 !py-1 px-4 leading-tight"
               >
                 Free Consultation
               </a>
@@ -209,23 +204,18 @@ export default function Navbar() {
                       aria-hidden
                     />
                     <span className="font-sans text-inherit whitespace-nowrap tabular-nums">
-                      <span aria-hidden className="opacity-90">
-                        –{' '}
-                      </span>
                       {whatsappDisplay}
                     </span>
                   </a>
                   <span
-                    className="text-gold-400/85 text-base font-light select-none [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]"
+                    className="inline-block shrink-0 w-px h-6 self-center bg-gold-400/85 rounded-full [box-shadow:0_1px_2px_rgba(0,0,0,0.35)]"
                     aria-hidden
-                  >
-                    |
-                  </span>
+                  />
                   <a
                     href={whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-fc-primary font-heading justify-center text-base !py-2.5 px-5 whitespace-nowrap"
+                    className="btn-fc-primary font-heading justify-center text-base !py-1.5 px-5 leading-tight whitespace-nowrap"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Free Consultation
