@@ -2,6 +2,7 @@ import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import FreeConsultationSection from '../../components/designndev/FreeConsultationSection'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
+import PageHero, { PAGE_HERO_IMAGES } from '../../components/designndev/PageHero'
 
 export const metadata = {
   title: 'Contact Us | Founders Club',
@@ -14,16 +15,13 @@ export default function ContactPage() {
     <main className="relative min-h-screen">
       <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
       <Navbar />
-      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="section-heading font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-6 normal-case">
-            Let&apos;s Chat
-          </h1>
-          <p className="text-gold-100/95 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-subheading">
-            Building something meaningful? Add your details below and we&apos;ll get back to you with next steps and a time to talk.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Contact us"
+        subtitle="Add your details below and we'll get back to you with next steps and a time to talk."
+        imageFilename={PAGE_HERO_IMAGES.contact}
+        imageAlt="Contact Sahai Law"
+        priority
+      />
       <div className="pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
           <FreeConsultationSection animated={false} />

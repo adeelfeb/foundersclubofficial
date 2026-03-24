@@ -67,10 +67,11 @@ function FaqAccordion({ idPrefix, footerClassName = '' }) {
 }
 
 /**
- * @param {{ layout?: 'page' | 'section' }} props
+ * @param {{ layout?: 'page' | 'section', skipPageHero?: boolean }} props
  * — `page`: full FAQ page (hero + list). — `section`: home / inline block with h2.
+ * — `skipPageHero`: when layout is `page`, render only the accordion (use with external PageHero).
  */
-export default function FaqSection({ layout = 'page' }) {
+export default function FaqSection({ layout = 'page', skipPageHero = false }) {
   const idPrefix = layout === 'section' ? 'home-faq' : 'faq'
 
   if (layout === 'section') {
@@ -89,6 +90,16 @@ export default function FaqSection({ layout = 'page' }) {
           <FaqAccordion idPrefix={idPrefix} footerClassName="text-center" />
         </div>
       </section>
+    )
+  }
+
+  if (skipPageHero) {
+    return (
+      <div className="pb-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+          <FaqAccordion idPrefix={idPrefix} />
+        </div>
+      </div>
     )
   }
 

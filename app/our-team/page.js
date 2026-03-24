@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import TextureOverlay from '../../components/designndev/TextureOverlay'
+import PageHero, { PAGE_HERO_IMAGES } from '../../components/designndev/PageHero'
 
 const team = [
   { name: 'Sahail', role: 'Founder & Lead Counsel', bio: 'Focused on making legal services clear and accessible. Experienced in corporate, real estate, and estate planning.' },
@@ -21,16 +22,13 @@ export default function OurTeamPage() {
     <main className="relative min-h-screen">
       <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
       <Navbar />
-      <section className="relative min-h-[30vh] flex items-center justify-center pt-28 pb-16">
-        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 normal-case drop-shadow-lg mb-4">
-            Our Team
-          </h1>
-          <p className="text-gold-100/90 text-lg max-w-2xl mx-auto leading-relaxed font-subheading">
-            The people behind Sahail Law — dedicated to clear, practical legal solutions.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Our team"
+        subtitle="The people behind Sahail Law — dedicated to clear, practical legal solutions."
+        imageFilename={PAGE_HERO_IMAGES.ourTeam}
+        imageAlt="Our team at Sahai Law"
+        priority
+      />
       <div className="pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
           <p className="text-gold-100/80 text-lg mb-4 max-w-2xl font-subheading">
