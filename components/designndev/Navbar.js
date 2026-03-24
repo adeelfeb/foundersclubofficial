@@ -52,6 +52,9 @@ export default function Navbar() {
     return pathname.startsWith(href)
   }
 
+  const whatsappHref = 'https://wa.me/13654995551'
+  const whatsappDisplay = '1 (365) 499-5551'
+
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/practice-areas', label: 'Practice areas' },
@@ -131,13 +134,32 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Right: CTA */}
-            <div className="hidden sm:flex justify-end items-center min-w-[2.75rem] pl-1">
+            {/* Right: WhatsApp contact + CTA */}
+            <div className="hidden sm:flex justify-end items-center min-w-0 pl-1 gap-2 md:gap-3">
               <a
-                href="https://wa.me/13654995551"
+                href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-fc-primary font-heading text-sm whitespace-nowrap py-2 px-4"
+                className="flex items-center gap-1.5 shrink-0 font-heading text-xs md:text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
+              >
+                <Image
+                  src="/images/phone.png"
+                  alt=""
+                  width={18}
+                  height={18}
+                  className="h-[18px] w-[18px] md:h-5 md:w-5 object-contain opacity-95"
+                  aria-hidden
+                />
+                <span className="whitespace-nowrap tabular-nums">
+                  <span aria-hidden>– </span>
+                  {whatsappDisplay}
+                </span>
+              </a>
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-fc-primary font-heading text-sm whitespace-nowrap shrink-0 !py-1.5 px-4"
               >
                 Free Consultation
               </a>
@@ -160,12 +182,32 @@ export default function Navbar() {
           >
             <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pt-8 pb-16">
               {/* Mobile: CTA inside menu as full-width button */}
-              <div className="sm:hidden mb-8">
+              <div className="sm:hidden mb-8 space-y-4">
                 <a
-                  href="https://wa.me/13654995551"
+                  href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-fc-primary font-heading w-full justify-center text-base py-3.5"
+                  className="flex items-center justify-center gap-2 font-heading text-base text-gold-200/95 hover:text-gold-100 no-underline transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Image
+                    src="/images/phone.png"
+                    alt=""
+                    width={22}
+                    height={22}
+                    className="h-[22px] w-[22px] object-contain opacity-95"
+                    aria-hidden
+                  />
+                  <span className="whitespace-nowrap tabular-nums">
+                    <span aria-hidden>– </span>
+                    {whatsappDisplay}
+                  </span>
+                </a>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-fc-primary font-heading w-full justify-center text-base !py-2.5"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Free Consultation

@@ -78,7 +78,7 @@ export default function IconBoxSection() {
               className="border border-gold-400/25 bg-forest-950/40 p-5 md:p-6 hover:border-gold-400/50 transition-colors duration-300"
             >
               <div className="flex items-start gap-4 md:gap-5">
-                <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 text-gold-400" aria-hidden>
+                <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 text-gold-400" aria-hidden>
                   {item.icon}
                 </div>
                 <div>
