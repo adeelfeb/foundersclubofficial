@@ -79,7 +79,7 @@ export default function Navbar() {
         />
         <div className="absolute inset-x-0 top-0 z-[60] pointer-events-none">
           <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pointer-events-auto">
-            <div className="grid grid-cols-3 items-center gap-3 sm:gap-6 lg:gap-10 h-[var(--fc-navbar-height)] py-0">
+            <div className="grid items-center gap-2 sm:gap-4 lg:gap-10 h-[var(--fc-navbar-height)] py-0 grid-cols-[auto_1fr] sm:grid-cols-[auto_minmax(0,1fr)_max-content]">
             {/* Left: Menu toggle – generous tap target */}
             <div className="flex justify-start min-w-[2.75rem] items-center gap-2.5 sm:gap-3">
               <button
@@ -117,8 +117,8 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Center: Logo – on mobile larger and pushed right; on sm+ centered */}
-            <div className="flex justify-end sm:justify-center col-span-2 sm:col-span-1 min-h-0">
+            {/* Center: Logo – on mobile pushed right; on sm+ centered in flexible middle column */}
+            <div className="flex justify-end sm:justify-center min-h-0 min-w-0">
               <Link
                 href="/"
                 className="flex items-center leading-none no-underline hover:opacity-90 transition-opacity"
@@ -134,27 +134,36 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Right: WhatsApp contact + CTA */}
-            <div className="hidden sm:flex justify-end items-center min-w-0 pl-1 gap-2 md:gap-3">
+            {/* Right: WhatsApp contact | CTA — max-content column so the full number is never clipped */}
+            <div className="hidden sm:flex justify-end items-center shrink-0 pl-1 sm:pl-2 gap-2 md:gap-2.5 overflow-visible">
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 shrink-0 font-heading text-xs md:text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
+                className="group flex items-center gap-1.5 shrink-0 max-w-none text-sm font-medium text-gold-100 hover:text-gold-50 no-underline transition-colors [text-shadow:0_1px_2px_rgba(0,0,0,0.65)]"
               >
                 <Image
                   src="/images/phone.png"
                   alt=""
                   width={18}
                   height={18}
-                  className="h-[18px] w-[18px] md:h-5 md:w-5 object-contain opacity-95"
+                  className="h-[18px] w-[18px] md:h-5 md:w-5 shrink-0 object-contain brightness-110 contrast-105 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] group-hover:brightness-125"
                   aria-hidden
                 />
-                <span className="whitespace-nowrap tabular-nums">
-                  <span aria-hidden>– </span>
+                {/* font-sans: Luxerie has no / broken digit glyphs — body font so numerals render and match color */}
+                <span className="font-sans text-inherit whitespace-nowrap tabular-nums tracking-normal">
+                  <span aria-hidden className="opacity-90">
+                    –{' '}
+                  </span>
                   {whatsappDisplay}
                 </span>
               </a>
+              <span
+                className="shrink-0 text-gold-400/80 text-sm font-light px-1 sm:px-1.5 select-none [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]"
+                aria-hidden
+              >
+                |
+              </span>
               <a
                 href={whatsappHref}
                 target="_blank"
@@ -182,36 +191,46 @@ export default function Navbar() {
           >
             <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pt-8 pb-16">
               {/* Mobile: CTA inside menu as full-width button */}
-              <div className="sm:hidden mb-8 space-y-4">
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 font-heading text-base text-gold-200/95 hover:text-gold-100 no-underline transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Image
-                    src="/images/phone.png"
-                    alt=""
-                    width={22}
-                    height={22}
-                    className="h-[22px] w-[22px] object-contain opacity-95"
+              <div className="sm:hidden mb-8">
+                <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-3">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-2 text-base font-medium text-gold-100 hover:text-gold-50 no-underline transition-colors [text-shadow:0_1px_3px_rgba(0,0,0,0.75)]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Image
+                      src="/images/phone.png"
+                      alt=""
+                      width={22}
+                      height={22}
+                      className="h-[22px] w-[22px] shrink-0 object-contain brightness-110 contrast-105 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] group-hover:brightness-125"
+                      aria-hidden
+                    />
+                    <span className="font-sans text-inherit whitespace-nowrap tabular-nums">
+                      <span aria-hidden className="opacity-90">
+                        –{' '}
+                      </span>
+                      {whatsappDisplay}
+                    </span>
+                  </a>
+                  <span
+                    className="text-gold-400/85 text-base font-light select-none [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]"
                     aria-hidden
-                  />
-                  <span className="whitespace-nowrap tabular-nums">
-                    <span aria-hidden>– </span>
-                    {whatsappDisplay}
+                  >
+                    |
                   </span>
-                </a>
-                <a
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-fc-primary font-heading w-full justify-center text-base !py-2.5"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Free Consultation
-                </a>
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-fc-primary font-heading justify-center text-base !py-2.5 px-5 whitespace-nowrap"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Free Consultation
+                  </a>
+                </div>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2 w-full max-w-[1200px]">
                 {navItems.map((item) => (
