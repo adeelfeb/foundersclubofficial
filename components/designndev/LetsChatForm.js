@@ -59,14 +59,14 @@ export default function LetsChatForm() {
     }
   }
 
-  const inputClass = 'w-full px-4 py-3 bg-forest-700/80 border border-forest-600 rounded-lg text-gold-100 placeholder-gold-200/40 focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 outline-none transition-all'
-  const labelClass = 'block text-sm font-medium text-gold-200/90 mb-2'
+  const inputClass = 'w-full px-4 py-3 bg-forest-700/80 border border-forest-600 rounded-none text-gold-100 placeholder-gold-200/40 focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 outline-none transition-all text-left'
+  const labelClass = 'block text-sm font-medium text-gold-200/90 mb-2 text-left'
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-5 relative">
+    <div className="w-full max-w-none text-left">
+      <form onSubmit={handleSubmit} className="space-y-5 relative w-full text-left">
         {isSubmitting && (
-          <div className="absolute inset-0 rounded-2xl bg-forest-800/60 backdrop-blur-sm z-10 pointer-events-auto" aria-hidden />
+          <div className="absolute inset-0 rounded-none bg-forest-800/60 backdrop-blur-sm z-10 pointer-events-auto" aria-hidden />
         )}
         <div>
           <label htmlFor="letschat-email" className={labelClass}>Email Address *</label>
@@ -125,7 +125,7 @@ export default function LetsChatForm() {
           disabled={isSubmitting}
           whileHover={!isSubmitting ? { scale: 1.01 } : {}}
           whileTap={!isSubmitting ? { scale: 0.99 } : {}}
-          className="w-full py-2.5 px-4 text-sm font-medium text-forest-950 bg-gold-500 border border-gold-500 rounded-lg hover:bg-gold-400 hover:border-gold-400 transition-all flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
+          className="w-full py-2.5 px-4 text-sm font-medium text-forest-950 bg-gold-500 border border-gold-500 rounded-none hover:bg-gold-400 hover:border-gold-400 transition-all flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
         >
           {isSubmitting ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Submitting…</>
@@ -139,7 +139,7 @@ export default function LetsChatForm() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className={`p-4 rounded-lg border ${submitStatus.type === 'success' ? 'bg-gold-400/10 text-gold-200 border-gold-500/30' : 'bg-red-900/20 text-red-200 border-red-700/50'}`}
+              className={`p-4 rounded-none border ${submitStatus.type === 'success' ? 'bg-gold-400/10 text-gold-200 border-gold-500/30' : 'bg-red-900/20 text-red-200 border-red-700/50'}`}
             >
               <p className="text-sm font-medium">{submitStatus.message}</p>
             </motion.div>

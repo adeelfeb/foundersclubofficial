@@ -21,7 +21,7 @@ export default function FreeConsultationSection({ animated = true }) {
           By getting in touch, we provide an opportunity to support you at the right time and to make the right decision. Our team is looking forward to hearing from you and assisting you with a wide range of matters.
         </p>
       </div>
-      <div className="rounded-2xl border border-forest-600 p-6 md:p-8 fc-card flex flex-col min-h-0">
+      <div className="rounded-none border border-forest-600 p-6 md:p-8 fc-card flex flex-col min-h-0 w-full min-w-0">
         <LetsChatForm />
       </div>
     </>
@@ -29,14 +29,14 @@ export default function FreeConsultationSection({ animated = true }) {
 
   if (!animated) {
     return (
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+      <section className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 lg:gap-16 items-stretch">
         {content}
       </section>
     )
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 lg:gap-16 items-stretch">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function FreeConsultationSection({ animated = true }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="rounded-2xl border border-forest-600 p-6 md:p-8 fc-card flex flex-col min-h-0"
+        className="rounded-none border border-forest-600 p-6 md:p-8 fc-card flex flex-col min-h-0 w-full min-w-0"
       >
         <LetsChatForm />
       </motion.div>
