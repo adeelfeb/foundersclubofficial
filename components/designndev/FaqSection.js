@@ -20,12 +20,12 @@ function FaqAccordion({ idPrefix, footerClassName = '' }) {
           return (
             <div
               key={index}
-              className="border-2 border-white/90 bg-white shadow-[0_1px_0_rgba(0,0,0,0.04)] rounded-none px-4 py-4 md:px-5 md:py-5"
+              className="border border-gold-200/55 bg-gold-50/95 shadow-[0_1px_2px_rgba(32,60,45,0.06)] rounded-none px-4 py-4 md:px-5 md:py-5"
             >
               <button
                 type="button"
                 onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between gap-4 text-left no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-none"
+                className="w-full flex items-center justify-between gap-4 text-left no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-gold-50 rounded-none"
                 aria-expanded={isOpen}
                 aria-controls={`${idPrefix}-answer-${index}`}
                 id={`${idPrefix}-question-${index}`}
@@ -47,7 +47,7 @@ function FaqAccordion({ idPrefix, footerClassName = '' }) {
                 aria-labelledby={`${idPrefix}-question-${index}`}
                 className={`overflow-hidden transition-all duration-300 ease-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
               >
-                <p className="pt-3 pb-0 text-forest-800/95 leading-relaxed font-subheading border-t border-gray-200/90 mt-3">
+                <p className="pt-3 pb-0 text-forest-800/95 leading-relaxed font-subheading border-t border-gold-200/60 mt-3">
                   {item.answer}
                 </p>
               </div>

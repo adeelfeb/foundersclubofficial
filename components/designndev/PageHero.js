@@ -11,6 +11,7 @@ export const PAGE_HERO_IMAGES = {
 
 /**
  * Full-bleed interior page hero with background image and gradient overlay.
+ * Title and optional subtitle render centered below the image strip.
  * @param {{ title: string, subtitle?: string, imageFilename: string, imageAlt: string, priority?: boolean }} props
  */
 export default function PageHero({
@@ -23,41 +24,43 @@ export default function PageHero({
   const src = `/images/hero/${encodeURIComponent(imageFilename)}`
 
   return (
-    <section
-      className="relative min-h-[52vh] sm:min-h-[56vh] md:min-h-[62vh] lg:min-h-[min(70vh,720px)] flex items-end pt-28 pb-10 md:pb-16 overflow-hidden"
-      aria-labelledby="page-hero-heading"
-    >
-      <div className="absolute inset-0">
-        <Image
-          src={src}
-          alt={imageAlt}
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-          priority={priority}
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black via-black/65 to-black/35"
-          aria-hidden
-        />
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-transparent md:from-black/70 md:via-black/25"
-          aria-hidden
-        />
-      </div>
-      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
+    <>
+      <section
+        className="relative min-h-[52vh] sm:min-h-[56vh] md:min-h-[62vh] lg:min-h-[min(70vh,720px)] pt-28 pb-0 overflow-hidden"
+      >
+        <div className="absolute inset-0">
+          <Image
+            src={src}
+            alt={imageAlt}
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            priority={priority}
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-black/28 via-black/14 to-black/8"
+            aria-hidden
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/12 to-transparent md:from-black/28 md:via-black/8"
+            aria-hidden
+          />
+        </div>
+      </section>
+
+      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pt-10 pb-6 md:pt-12 md:pb-8 text-center">
         <h1
           id="page-hero-heading"
-          className="section-heading font-heading text-4xl sm:text-5xl md:text-6xl font-medium text-gold-400 mb-3 md:mb-4 normal-case drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)] max-w-4xl"
+          className="section-heading font-heading text-4xl sm:text-5xl md:text-6xl font-medium text-gold-400 mb-3 md:mb-4 normal-case max-w-4xl mx-auto"
         >
           {title}
         </h1>
         {subtitle ? (
-          <p className="text-gold-100/95 text-lg md:text-xl max-w-2xl leading-relaxed font-subheading drop-shadow-md pb-1">
+          <p className="text-gold-100/95 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-subheading">
             {subtitle}
           </p>
         ) : null}
       </div>
-    </section>
+    </>
   )
 }
