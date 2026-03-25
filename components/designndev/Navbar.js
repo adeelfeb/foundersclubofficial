@@ -126,8 +126,10 @@ export default function Navbar() {
                 <Image
                   src={foundersClubImages.logo}
                   alt="Founders Club"
-                  width={128}
-                  height={38}
+                  width={660}
+                  height={100}
+                  sizes="(max-width: 640px) 160px, (max-width: 1024px) 210px, 240px"
+                  quality={100}
                   className="h-7 w-auto sm:h-7 md:h-8 lg:h-9 xl:h-9 object-contain"
                   priority
                 />

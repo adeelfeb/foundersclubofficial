@@ -119,8 +119,10 @@ export default function Footer() {
                 <Image
                   src={foundersClubImages.logo}
                   alt="Founders Club"
-                  width={128}
-                  height={38}
+                  width={660}
+                  height={100}
+                  sizes="(max-width: 640px) 180px, (max-width: 1024px) 240px, 280px"
+                  quality={100}
                   className={FOOTER_LOGO_CLASS}
                 />
               </Link>
