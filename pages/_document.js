@@ -1,14 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-const FAVICON_PNG = '/images/logo/FNL%20LOGO.png'
-
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" type="image/png" href={FAVICON_PNG} />
-        <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href={FAVICON_PNG} />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="preload" href="/fonts/juana-regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/juana-semibold.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{

@@ -1,14 +1,12 @@
 import '../styles/globals.css'
 
-const FAVICON_PNG = '/images/logo/FNL%20LOGO.png'
-
 export const metadata = {
   title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
   description: 'The Modern Day Members Only Community. For Founders and Entrepreneurs focused on Mind, Body, and Business.',
   keywords: 'founders club, entrepreneurs, private network, membership, mastermind',
   icons: {
-    icon: [{ url: FAVICON_PNG, type: 'image/png' }],
-    apple: FAVICON_PNG,
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    apple: '/favicon.svg',
   },
   openGraph: {
     title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
