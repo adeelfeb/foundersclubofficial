@@ -88,7 +88,7 @@ function FooterNewsletter() {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="shrink-0 rounded-none bg-gold-500/90 px-4 py-2.5 text-sm font-heading text-forest-950 hover:bg-gold-400 transition-colors disabled:opacity-60"
+          className="shrink-0 rounded-none bg-gold-500/90 px-4 py-2.5 text-sm font-sans text-forest-950 hover:bg-gold-400 transition-colors disabled:opacity-60"
         >
           {status === 'loading' ? '…' : 'Subscribe'}
         </button>
@@ -119,10 +119,8 @@ export default function Footer() {
                 <Image
                   src={foundersClubImages.logo}
                   alt="Founders Club"
-                  width={660}
-                  height={100}
-                  sizes="(max-width: 640px) 180px, (max-width: 1024px) 240px, 280px"
-                  quality={100}
+                  width={128}
+                  height={38}
                   className={FOOTER_LOGO_CLASS}
                 />
               </Link>

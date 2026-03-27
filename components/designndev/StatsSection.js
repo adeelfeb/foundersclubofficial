@@ -35,7 +35,7 @@ export default function StatsSection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="text-center"
             >
-              <div className="font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-2">
+              <div className="font-sans text-4xl md:text-5xl font-medium text-gold-500 mb-2">
                 {stat.value}
               </div>
               <div className="text-gold-100/80 text-sm md:text-base">

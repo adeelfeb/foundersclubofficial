@@ -80,11 +80,11 @@ export default function EventsPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
               <div className="text-center">
-                <div className="font-heading text-4xl font-semibold text-gold-500 mb-2">150+</div>
+                <div className="font-sans text-4xl font-semibold text-gold-500 mb-2">150+</div>
                 <div className="text-gold-100/80 text-sm">Member-only events annually</div>
               </div>
               <div className="text-center">
-                <div className="font-heading text-4xl font-semibold text-gold-500 mb-2">10,000+</div>
+                <div className="font-sans text-4xl font-semibold text-gold-500 mb-2">10,000+</div>
                 <div className="text-gold-100/80 text-sm">Total attendees across all experiences</div>
               </div>
               <div className="text-center">

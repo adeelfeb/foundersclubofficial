@@ -1,23 +1,20 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
+const FAVICON_PNG = '/images/logo/FNL%20LOGO.png'
+
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
-        <link rel="preload" href="/fonts/luxerie-regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-        {/* Force same body/header/footer font as home page (Poppins) on all Pages Router pages */}
+        <link rel="icon" type="image/png" href={FAVICON_PNG} />
+        <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href={FAVICON_PNG} />
+        <link rel="preload" href="/fonts/juana-regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/juana-semibold.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{
           __html: `
             html, body {
-              font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+              font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif !important;
             }
           `
         }} />
@@ -32,7 +29,3 @@ export default function Document() {
 
 // Ensure this file is only used by Pages Router
 // This prevents conflicts with App Router's layout.js
-
-
-
-

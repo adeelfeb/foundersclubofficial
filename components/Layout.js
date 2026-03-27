@@ -19,9 +19,7 @@ export default function Layout({ children }) {
         body {
           max-width: 100vw;
           overflow-x: hidden;
-          font-family: var(--font-poppins), 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-            sans-serif;
+          font-family: var(--font-sans), Arial, Helvetica, sans-serif;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }

@@ -120,7 +120,7 @@ export default function BecomeAMemberPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 {stats.map((s) => (
                   <div key={s.label} className="text-center">
-                    <div className="font-heading text-3xl font-semibold text-gold-400">{s.value}</div>
+                    <div className="font-sans text-3xl font-semibold text-gold-400">{s.value}</div>
                     <div className="text-gold-100/80 text-sm">{s.label}</div>
                   </div>
                 ))}

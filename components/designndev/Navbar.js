@@ -103,13 +103,13 @@ export default function Navbar() {
                 <div className="flex items-center gap-8">
                   <Link
                     href="/about-us"
-                    className="font-heading text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
+                    className="font-sans text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
                   >
                     About us
                   </Link>
                   <Link
                     href="/practice-areas"
-                    className="font-heading text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
+                    className="font-sans text-sm text-white/90 hover:text-gold-200 no-underline transition-colors"
                   >
                     Practice areas
                   </Link>
@@ -126,10 +126,8 @@ export default function Navbar() {
                 <Image
                   src={foundersClubImages.logo}
                   alt="Founders Club"
-                  width={660}
-                  height={100}
-                  sizes="(max-width: 640px) 160px, (max-width: 1024px) 210px, 240px"
-                  quality={100}
+                  width={128}
+                  height={38}
                   className="h-7 w-auto sm:h-7 md:h-8 lg:h-9 xl:h-9 object-contain"
                   priority
                 />
@@ -152,7 +150,7 @@ export default function Navbar() {
                   className="h-[18px] w-[18px] md:h-5 md:w-5 shrink-0 object-contain brightness-110 contrast-105 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)] group-hover:brightness-125"
                   aria-hidden
                 />
-                {/* font-sans: Luxerie has no / broken digit glyphs — body font so numerals render and match color */}
+                {/* font-sans: Arial for phone numerals and readability */}
                 <span className="font-sans text-inherit whitespace-nowrap tabular-nums tracking-normal">
                   {whatsappDisplay}
                 </span>
@@ -165,7 +163,7 @@ export default function Navbar() {
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-fc-primary font-heading text-sm whitespace-nowrap shrink-0 !py-1 px-4 leading-tight"
+                className="btn-fc-primary font-sans text-sm whitespace-nowrap shrink-0 !py-1 px-4 leading-tight"
               >
                 Free Consultation
               </a>
@@ -217,7 +215,7 @@ export default function Navbar() {
                     href={whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-fc-primary font-heading justify-center text-base !py-1.5 px-5 leading-tight whitespace-nowrap"
+                    className="btn-fc-primary font-sans justify-center text-base !py-1.5 px-5 leading-tight whitespace-nowrap"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Free Consultation

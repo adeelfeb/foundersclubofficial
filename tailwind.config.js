@@ -43,10 +43,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-poppins)', 'Poppins', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-serif)', 'Georgia', 'Cambria', 'serif'],
-        heading: ['var(--font-heading)', 'Luxerie', 'Georgia', 'Cambria', 'serif'],
-        subheading: ['var(--font-subheading)', 'Dragon-Serial', 'Georgia', 'Cambria', 'serif'],
+        sans: ['var(--font-sans)', 'Arial', 'Helvetica', 'sans-serif'],
+        heading: ['var(--font-heading)', 'Juana', 'Georgia', 'serif'],
+        subheading: ['var(--font-subheading)', 'Arial', 'Helvetica', 'sans-serif'],
       },
       borderRadius: {
         'fc': '0.5rem',

@@ -71,7 +71,7 @@ export default function NominatePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {benefits.map((b) => (
                 <div key={b.count} className="bg-forest-700/60 border border-forest-600 rounded-xl p-6 md:p-8">
-                  <div className="font-heading text-3xl font-semibold text-gold-400 mb-2">{b.count} {b.title}</div>
+                  <div className="font-sans text-3xl font-semibold text-gold-400 mb-2">{b.count} {b.title}</div>
                   <div className="font-semibold text-gold-200 mb-3">{b.reward}</div>
                   <p className="text-gold-100/80 leading-relaxed">{b.description}</p>
                 </div>

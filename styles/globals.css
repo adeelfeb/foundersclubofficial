@@ -2,20 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom fonts: Luxerie (headings), Dragon-Serial (subheadings) */
+/* Juana — display/headings only (see tailwind fontFamily.heading) */
 @font-face {
-  font-family: 'Luxerie';
-  src: url('/fonts/luxerie-regular.otf') format('opentype');
-  font-weight: normal;
+  font-family: 'Juana';
+  src: url('/fonts/juana-regular.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Dragon-Serial';
-  src: url('/fonts/Dragon-Serial-Regular.otf') format('opentype'),
-       url('/fonts/Dragon-Serial-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Juana';
+  src: url('/fonts/juana-semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Juana';
+  src: url('/fonts/juana-bold.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -27,10 +34,10 @@
   --secondary-color: #666;
   --border-color: #eaeaea;
   --background-color: #fafafa;
-  /* Ensures same font across App Router and Pages Router (App Router may override via next/font) */
-  --font-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-heading: 'Luxerie', var(--font-serif), Georgia, Cambria, serif;
-  --font-subheading: 'Dragon-Serial', var(--font-serif), Georgia, Cambria, serif;
+  /* Body / UI: Arial; headings: Juana (loaded above) */
+  --font-sans: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  --font-heading: 'Juana', Georgia, 'Times New Roman', serif;
+  --font-subheading: Arial, Helvetica, 'Helvetica Neue', sans-serif;
   /* Founders Club – vibrant gold + forest with gradient/texture */
   --fc-forest-950: #020c08;
   --fc-forest-800: #1a3328;
@@ -65,7 +72,7 @@ body {
   overflow-x: hidden;
   color: #333;
   line-height: 1.6;
-  font-family: var(--font-poppins), 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -85,16 +92,14 @@ body {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.15), 0 0 16px rgba(255, 255, 255, 0.08);
 }
 
-/* Headings: Luxerie Regular – preserve title case (no all-caps) */
-h1, h2,
-.font-heading {
+/* Headings (Juana): h1/h2 and explicit section titles — preserve title case (no all-caps) */
+h1, h2 {
   font-family: var(--font-heading);
   text-transform: none !important;
 }
 
-/* Section headings: use same heading font as home (Luxerie) */
 main .section-heading {
-  font-family: var(--font-heading), Georgia, Cambria, serif !important;
+  font-family: var(--font-heading) !important;
   text-transform: none !important;
 }
 
@@ -104,16 +109,16 @@ main .section-heading {
   box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.05), 0 -2px 12px 0 rgba(255, 255, 255, 0.04);
 }
 
-/* Subheadings and body text: Dragon-Serial – same as home page sub-sections */
+/* Subheadings, labels, body (Arial) */
 h3, h4, h5, h6,
 .font-subheading {
   font-family: var(--font-subheading);
 }
 
-/* Main content paragraphs and lists: sub font + larger, readable size site-wide */
+/* Main content paragraphs and lists: Arial + readable size site-wide */
 main p,
 main li {
-  font-family: var(--font-subheading), var(--font-poppins), sans-serif;
+  font-family: var(--font-subheading);
   font-size: 1.0625rem;
   line-height: 1.7;
 }
@@ -226,6 +231,7 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
 
 /* ---------- Founders Club: buttons & cards (no border-radius, clear borders) ---------- */
 .btn-fc-primary {
+  font-family: var(--font-sans);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -249,6 +255,7 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
 }
 
 .btn-fc-secondary {
+  font-family: var(--font-sans);
   display: inline-flex;
   align-items: center;
   justify-content: center;
