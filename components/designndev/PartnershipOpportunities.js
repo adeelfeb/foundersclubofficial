@@ -53,7 +53,7 @@ export default function PartnershipOpportunities() {
                 <div className="p-2 rounded-lg bg-gold-400/10 text-gold-400">
                   <item.Icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-subheading text-xl font-medium text-gold-200">
+                <h3 className="font-heading text-xl font-medium text-gold-200">
                   {item.title}
                 </h3>
               </div>

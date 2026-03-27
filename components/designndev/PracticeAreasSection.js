@@ -57,7 +57,7 @@ export default function PracticeAreasSection() {
                       {item.intro}
                     </p>
                   )}
-                  <h3 className="font-subheading text-xl md:text-2xl lg:text-3xl font-medium text-gold-50 drop-shadow-sm leading-tight">
+                  <h3 className="font-heading text-xl md:text-2xl lg:text-3xl font-medium text-gold-50 drop-shadow-sm leading-tight">
                     {item.title}
                   </h3>
                   {item.description && (

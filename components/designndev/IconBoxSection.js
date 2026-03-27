@@ -82,7 +82,7 @@ export default function IconBoxSection() {
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="font-subheading text-xl md:text-2xl font-semibold text-gold-200 leading-tight">
+                  <h3 className="font-heading text-xl md:text-2xl font-semibold text-gold-200 leading-tight">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-sm md:text-base text-gold-100/90 leading-relaxed">

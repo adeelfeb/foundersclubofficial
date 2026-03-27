@@ -59,7 +59,7 @@ export default function PartnershipsPage() {
           <div className="space-y-12 mb-20">
             {opportunities.map((opp) => (
               <div key={opp.title} className="bg-forest-700/50 border border-forest-600 rounded-xl p-6 md:p-8">
-                <h3 className="font-subheading text-xl md:text-2xl font-semibold text-gold-300 mb-4">{opp.title}</h3>
+                <h3 className="font-heading text-xl md:text-2xl font-semibold text-gold-300 mb-4">{opp.title}</h3>
                 <p className="text-gold-100/80 leading-relaxed font-subheading">{opp.description}</p>
               </div>
             ))}
