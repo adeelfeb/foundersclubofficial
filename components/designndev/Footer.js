@@ -12,9 +12,9 @@ const services = [
   { label: 'Immigration Law', href: '#practice-areas' },
 ]
 
-/** Matches pre–slim-header navbar logo scale (footer stays slightly more prominent than header) */
+/** Slightly larger than header logo; intrinsic size keeps Next/Image sharp on retina */
 const FOOTER_LOGO_CLASS =
-  'h-8 w-auto sm:h-8 md:h-9 lg:h-9 xl:h-10 object-contain'
+  'h-14 w-auto sm:h-16 md:h-[4.75rem] lg:h-20 xl:h-24 2xl:h-[6.5rem] object-contain [image-rendering:auto]'
 
 function FooterNewsletter() {
   const [email, setEmail] = useState('')
@@ -119,9 +119,11 @@ export default function Footer() {
                 <Image
                   src={foundersClubImages.logo}
                   alt="Founders Club"
-                  width={128}
-                  height={38}
+                  width={1440}
+                  height={427}
                   className={FOOTER_LOGO_CLASS}
+                  sizes="(max-width: 640px) 300px, (max-width: 1024px) 420px, (max-width: 1536px) 520px, 600px"
+                  quality={100}
                 />
               </Link>
               <FooterNewsletter />

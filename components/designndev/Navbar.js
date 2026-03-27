@@ -79,7 +79,7 @@ export default function Navbar() {
         />
         <div className="absolute inset-x-0 top-0 z-[60] pointer-events-none">
           <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-7 lg:px-9 xl:px-11 pointer-events-auto">
-            <div className="grid items-center gap-2 sm:gap-4 lg:gap-10 h-[var(--fc-navbar-height)] py-0 grid-cols-[auto_1fr] sm:grid-cols-[auto_minmax(0,1fr)_max-content]">
+            <div className="grid items-center gap-2 sm:gap-4 lg:gap-10 h-[var(--fc-navbar-height)] py-0 grid-cols-[auto_1fr] sm:grid-cols-[auto_minmax(0,1fr)_max-content] overflow-visible min-h-0">
             {/* Left: Menu toggle – generous tap target */}
             <div className="flex justify-start min-w-[2.75rem] items-center gap-2.5 sm:gap-3">
               <button
@@ -118,17 +118,19 @@ export default function Navbar() {
             </div>
 
             {/* Center: Logo – on mobile pushed right; on sm+ centered in flexible middle column */}
-            <div className="flex justify-end sm:justify-center min-h-0 min-w-0">
+            <div className="flex justify-end sm:justify-center min-h-0 min-w-0 overflow-visible">
               <Link
                 href="/"
-                className="flex items-center leading-none no-underline hover:opacity-90 transition-opacity"
+                className="flex items-center leading-none no-underline hover:opacity-90 transition-opacity overflow-visible"
               >
                 <Image
                   src={foundersClubImages.logo}
                   alt="Founders Club"
-                  width={128}
-                  height={38}
-                  className="h-7 w-auto sm:h-7 md:h-8 lg:h-9 xl:h-9 object-contain"
+                  width={1440}
+                  height={427}
+                  className="h-14 w-auto sm:h-16 md:h-[4.5rem] lg:h-20 xl:h-[5.25rem] 2xl:h-[5.75rem] object-contain [image-rendering:auto]"
+                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 380px, (max-width: 1536px) 460px, 520px"
+                  quality={100}
                   priority
                 />
               </Link>
