@@ -15,7 +15,7 @@ export default function PracticeAreasSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 mb-10 md:mb-14 text-left normal-case"
+          className="section-heading font-heading text-5xl md:text-6xl lg:text-6xl font-medium text-gold-500 mb-10 md:mb-14 text-left normal-case"
         >
           <span className="text-white">Practice</span> Areas
         </motion.h2>
@@ -27,7 +27,7 @@ export default function PracticeAreasSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="group relative aspect-[4/5] min-h-[260px] sm:min-h-[300px] w-full overflow-hidden rounded-lg border border-forest-600/60 transition-all duration-300 hover:border-gold-400/90 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.5),0_0_20px_rgba(212,175,55,0.15)]"
+              className="group relative aspect-[4/5] min-h-[300px] sm:min-h-[340px] lg:min-h-[360px] w-full overflow-hidden rounded-lg border border-forest-600/60 transition-all duration-300 hover:border-gold-400/90 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.5),0_0_20px_rgba(212,175,55,0.15)]"
             >
               {/* Background image */}
               <div className="absolute inset-0">
@@ -50,18 +50,18 @@ export default function PracticeAreasSection() {
                 aria-hidden
               />
               {/* Content – title always visible; intro + description fade in on hover */}
-              <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5">
-                <div className="flex flex-col gap-1.5">
+              <div className="absolute inset-0 flex flex-col justify-end p-5 md:p-6 lg:p-7">
+                <div className="flex flex-col gap-2 md:gap-2.5">
                   {item.intro && (
-                    <p className="text-gold-200/90 text-xs md:text-sm font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p className="text-gold-200/90 text-sm md:text-base lg:text-lg font-medium leading-snug opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       {item.intro}
                     </p>
                   )}
-                  <h3 className="font-subheading text-lg md:text-xl font-medium text-gold-50 drop-shadow-sm">
+                  <h3 className="font-subheading text-xl md:text-2xl lg:text-3xl font-medium text-gold-50 drop-shadow-sm leading-tight">
                     {item.title}
                   </h3>
                   {item.description && (
-                    <p className="text-gold-100/95 text-sm leading-relaxed mt-1 line-clamp-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <p className="text-gold-100/95 text-base md:text-lg leading-relaxed mt-1 md:mt-1.5 line-clamp-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       {item.description}
                     </p>
                   )}
