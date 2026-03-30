@@ -3,6 +3,11 @@ const path = require('path');
 
 const nextConfig = {
   reactStrictMode: true,
+
+  // No /fundraising route in app — old links or hosting rules may still hit this URL
+  async redirects() {
+    return [{ source: '/fundraising', destination: '/', permanent: false }]
+  },
   
   // Vercel deployment optimizations
   // Don't fail build if environment variables are missing

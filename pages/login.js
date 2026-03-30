@@ -8,8 +8,6 @@ import Footer from '../components/designndev/Footer'
 import { AuthCardSkeleton } from '../components/Skeleton'
 import { useRecaptcha } from '../utils/useRecaptcha'
 import { safeParseJsonResponse } from '../utils/safeJsonResponse'
-import { foundersClubImages } from '../lib/foundersClubImages'
-
 function formatErrorMessage(payload, fallback) {
   if (!payload) return fallback
   const detail =
@@ -302,16 +300,11 @@ export default function LoginPage() {
           <title>Member Login | Founders Club</title>
           <meta name="description" content="Sign in to your Founders Club account." />
         </Head>
-        <div className="min-h-screen bg-forest-800">
-          <div
-            className="absolute inset-0 w-full h-full bg-no-repeat bg-center opacity-[0.06] pointer-events-none"
-            style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}
-            aria-hidden
-          />
+        <div className="min-h-screen relative">
           <Navbar />
           <main className="relative z-10 pt-20 pb-20 flex items-center justify-center min-h-[50vh]">
             <div className="w-full max-w-md mx-auto px-4">
-              <div className="fc-card rounded-2xl border border-forest-600 bg-forest-700/60 p-6 md:p-8">
+              <div className="fc-card rounded-2xl border border-forest-600 p-6 md:p-8">
                 <AuthCardSkeleton />
               </div>
             </div>
@@ -329,12 +322,7 @@ export default function LoginPage() {
         <meta name="description" content="Sign in to your Founders Club account." />
         <meta name="keywords" content="Founders Club, login, member login" />
       </Head>
-      <div className="min-h-screen bg-forest-800 relative">
-        <div
-          className="absolute inset-0 w-full h-full bg-no-repeat bg-center opacity-[0.06] pointer-events-none"
-          style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }}
-          aria-hidden
-        />
+      <div className="min-h-screen relative">
         <Navbar />
         <main className="relative z-10 pt-20 pb-20">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
@@ -346,7 +334,7 @@ export default function LoginPage() {
             </p>
           </div>
           <div className="max-w-md mx-auto px-4">
-            <div className="fc-card rounded-2xl border border-forest-600 bg-forest-700/60 p-6 md:p-8">
+            <div className="fc-card rounded-2xl border border-forest-600 p-6 md:p-8">
               {error && (
                 <div
                   className="rounded-lg border border-red-800/60 bg-red-900/20 px-4 py-3 text-red-200 text-sm font-medium mb-6"

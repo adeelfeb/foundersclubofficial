@@ -1,12 +1,15 @@
 import Image from 'next/image'
 
-/** Filenames in `public/images/hero/` — paths are URL-encoded for Next/Image. */
+/**
+ * Filenames in `public/images/hero/` — URL-encoded for Next/Image.
+ * Interior pages use the shared hero art so routes work even if per-page PNGs are not added yet.
+ */
 export const PAGE_HERO_IMAGES = {
-  aboutUs: 'About us image.png',
-  contact: 'contact us image.png',
-  faq: 'Faqs image.png',
-  services: 'our services.png',
-  ourTeam: 'our team image.png',
+  aboutUs: 'FRONT IMAGE.png',
+  contact: 'FRONT IMAGE.png',
+  faq: 'FRONT IMAGE.png',
+  services: 'FRONT IMAGE.png',
+  ourTeam: 'FRONT IMAGE.png',
 }
 
 /**
@@ -37,12 +40,13 @@ export default function PageHero({
             sizes="100vw"
             priority={priority}
           />
+          <div className="absolute inset-0 bg-black/40" aria-hidden />
           <div
-            className="absolute inset-0 bg-gradient-to-t from-black/28 via-black/14 to-black/8"
+            className="absolute inset-0 bg-gradient-to-t from-black/38 via-black/22 to-black/12"
             aria-hidden
           />
           <div
-            className="absolute inset-0 bg-gradient-to-r from-black/35 via-black/12 to-transparent md:from-black/28 md:via-black/8"
+            className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/18 to-transparent md:from-black/38 md:via-black/12"
             aria-hidden
           />
         </div>

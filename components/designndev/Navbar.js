@@ -74,7 +74,7 @@ export default function Navbar() {
       >
         {/* Slim bar only; logo can extend past it (previous size) without growing the strip */}
         <div
-          className="h-[var(--fc-navbar-height)] w-full bg-black/40 backdrop-blur-sm nav-gold-line"
+          className="h-[var(--fc-navbar-height)] w-full bg-black/60 backdrop-blur-md nav-gold-line"
           aria-hidden
         />
         <div className="absolute inset-x-0 top-0 z-[60] pointer-events-none">
@@ -124,12 +124,12 @@ export default function Navbar() {
                 className="flex items-center leading-none no-underline hover:opacity-90 transition-opacity overflow-visible"
               >
                 <Image
-                  src={foundersClubImages.logo}
-                  alt="Founders Club"
+                  src={foundersClubImages.logoHeader}
+                  alt="Sahai Law"
                   width={1440}
                   height={427}
-                  className="h-14 w-auto sm:h-16 md:h-[4.5rem] lg:h-20 xl:h-[5.25rem] 2xl:h-[5.75rem] object-contain [image-rendering:auto]"
-                  sizes="(max-width: 640px) 280px, (max-width: 1024px) 380px, (max-width: 1536px) 460px, 520px"
+                  className="h-[5rem] w-auto sm:h-[5.75rem] md:h-[6.5rem] lg:h-[7.25rem] xl:h-[8rem] 2xl:h-[8.75rem] object-contain [image-rendering:auto] -my-3 sm:-my-3.5 md:-my-4 lg:-my-[1.125rem] xl:-my-5 2xl:-my-[1.35rem]"
+                  sizes="(max-width: 640px) 380px, (max-width: 1024px) 480px, (max-width: 1536px) 580px, 680px"
                   quality={100}
                   priority
                 />

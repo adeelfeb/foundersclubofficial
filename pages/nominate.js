@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
-import TextureOverlay from '../components/designndev/TextureOverlay'
-
 const benefits = [
   {
     count: 2,
@@ -27,8 +25,7 @@ export default function NominatePage() {
         <meta name="description" content="The Founders Club Nomination Program empowers you to shape the future of the club. Nominate up to five founders per year." />
         <meta name="keywords" content="Founders Club, nominate, referral, nomination program" />
       </Head>
-      <div className="min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep relative">
-        <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
+      <div className="min-h-screen relative">
         <Navbar />
         <main className="pt-20 pb-20 relative z-10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

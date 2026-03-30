@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
-import TextureOverlay from '../../components/designndev/TextureOverlay'
 import PageHero, { PAGE_HERO_IMAGES } from '../../components/designndev/PageHero'
 
 const team = [
@@ -20,7 +19,6 @@ export const metadata = {
 export default function OurTeamPage() {
   return (
     <main className="relative min-h-screen">
-      <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
       <Navbar />
       <PageHero
         title="Our team"

@@ -1,7 +1,6 @@
 import Navbar from '../../components/designndev/Navbar'
 import Footer from '../../components/designndev/Footer'
 import PartnershipFormSection from '../../components/designndev/PartnershipFormSection'
-import TextureOverlay from '../../components/designndev/TextureOverlay'
 import { foundersClubImages } from '../../lib/foundersClubImages'
 
 const opportunities = [
@@ -26,7 +25,6 @@ export const metadata = {
 export default function PartnershipsPage() {
   return (
     <main className="relative min-h-screen">
-      <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
       <Navbar />
       <section className="relative min-h-[55vh] flex items-center justify-center pt-20 pb-20 overflow-hidden">
         <div

@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import { foundersClubImages } from '../lib/foundersClubImages'
 
 export const metadata = {
   title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
         {/* Static full-viewport background – all pages share this */}
         <div
           className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/images/bg.png)' }}
+          style={{ backgroundImage: `url(${foundersClubImages.pageBackground})` }}
           aria-hidden
         />
         <div className="relative z-10 min-h-screen">

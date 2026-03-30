@@ -59,8 +59,9 @@ export default function LetsChatForm() {
     }
   }
 
-  const inputClass = 'w-full px-4 py-3 bg-forest-700/80 border border-forest-600 rounded-none text-gold-100 placeholder-gold-200/40 focus:ring-2 focus:ring-gold-500/50 focus:border-gold-500 outline-none transition-all text-left'
-  const labelClass = 'block text-sm font-medium text-gold-200/90 mb-2 text-left'
+  const inputClass =
+    'w-full px-4 py-3 rounded-none text-left bg-forest-900/85 border border-gold-500/25 text-gold-50 placeholder:text-gold-200/45 focus:ring-2 focus:ring-gold-400/35 focus:border-gold-400/55 outline-none transition-all'
+  const labelClass = 'block text-sm font-medium text-gold-200/95 mb-2 text-left'
 
   return (
     <div className="w-full max-w-none text-left">

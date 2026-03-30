@@ -49,6 +49,10 @@
   --fc-gold-300: #E2CF9E;
   /* Fixed Navbar – menu overlay top; ≈ vertical padding + logo (see components/designndev/Navbar.js) */
   --fc-navbar-height: 3.5rem;
+  /* Local brand backgrounds — public/images/background */
+  --fc-page-bg: url('/images/background/background%20color.png');
+  --fc-box-lighter: url('/images/background/lighter%20tone%20use%20for%20boxes%20if%20needed.png');
+  --fc-boundary-icons: url('/images/background/boundary%20and%20icons%20color.png');
 }
 
 @media (min-width: 768px) {
@@ -78,9 +82,13 @@ body {
 }
 
 
-/* Header: subtle white glow only (no yellow border) */
+/* Header: thin bottom accent (was 3px — too heavy on large viewports) */
 .nav-gold-line {
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06), 0 2px 12px 0 rgba(255, 255, 255, 0.04);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  background-image: var(--fc-boundary-icons);
+  background-size: 100% 1px;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 /* Header nav links: subtle white glow on hover */
@@ -298,9 +306,16 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   border-color: var(--fc-gold-400);
 }
 
-/* Founders Club card/section panel – no border radius, clear border */
+/* Founders Club card/section panel – lighter tone image + tint, clear border */
 .fc-card {
-  background-color: rgba(30, 66, 52, 0.5);
+  background-color: rgba(30, 66, 52, 0.45);
+  background-image: linear-gradient(
+      rgba(30, 66, 52, 0.78),
+      rgba(30, 66, 52, 0.78)
+    ),
+    var(--fc-box-lighter);
+  background-size: cover;
+  background-position: center;
   border: 1px solid rgba(37, 85, 64, 0.9);
   border-radius: 0;
 }

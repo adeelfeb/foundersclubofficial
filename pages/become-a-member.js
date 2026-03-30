@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
-import TextureOverlay from '../components/designndev/TextureOverlay'
 import { foundersClubImages } from '../lib/foundersClubImages'
 
 const stats = [
@@ -39,8 +38,7 @@ export default function BecomeAMemberPage() {
         <meta name="description" content="Join The Founders Club: 1,000+ peers across North America and Canada, over $20 billion in combined revenue. Apply for membership." />
         <meta name="keywords" content="Founders Club, become a member, apply, membership" />
       </Head>
-      <div className="relative min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
-        <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
+      <div className="relative min-h-screen">
         <Navbar />
         {/* Hero with full-bleed background */}
         <section className="relative min-h-[50vh] flex items-center justify-center pt-20 pb-16 overflow-hidden">

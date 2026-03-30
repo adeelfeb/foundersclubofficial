@@ -12,10 +12,13 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="py-16 md:py-24 bg-forest-800 border-t border-forest-700/50 relative overflow-hidden">
-      {/* Subtle texture */}
-      <div className="absolute inset-0 opacity-[0.04] bg-repeat pointer-events-none" style={{ backgroundImage: `url(${foundersClubImages.texture})`, backgroundSize: 'auto' }} aria-hidden />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <section className="py-16 md:py-24 bg-forest-800/85 border-t border-forest-700/50 relative overflow-hidden">
+      <div
+        className="absolute inset-0 opacity-[0.12] bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${foundersClubImages.boxBackgroundLighter})` }}
+        aria-hidden
+      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

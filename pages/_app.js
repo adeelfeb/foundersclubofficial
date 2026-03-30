@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { ToastProvider } from '../components/ToastProvider';
 import ErrorBoundary from '../components/ErrorBoundary';
 import RecaptchaPreloader from '../components/RecaptchaPreloader';
+import { foundersClubImages } from '../lib/foundersClubImages';
 
 const FAVICON_SVG = '/favicon.svg';
 
@@ -21,8 +22,15 @@ export default function App({ Component, pageProps }) {
           <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="" />
         </Head>
         <RecaptchaPreloader />
-        <div className="antialiased" style={{ minHeight: '100vh' }}>
-          <Component {...pageProps} />
+        <div className="antialiased relative min-h-screen" style={{ minHeight: '100vh' }}>
+          <div
+            className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${foundersClubImages.pageBackground})` }}
+            aria-hidden
+          />
+          <div className="relative z-10 min-h-screen">
+            <Component {...pageProps} />
+          </div>
         </div>
       </ToastProvider>
     </ErrorBoundary>

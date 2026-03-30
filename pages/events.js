@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/designndev/Navbar'
 import Footer from '../components/designndev/Footer'
-import TextureOverlay from '../components/designndev/TextureOverlay'
 import { foundersClubImages } from '../lib/foundersClubImages'
 
 const stats = [
@@ -46,8 +45,7 @@ export default function EventsPage() {
         <meta name="description" content="The Founders Club curates a calendar of cornerstone experiences: flagship gatherings, intimate workshops, masterminds, and retreats." />
         <meta name="keywords" content="Founders Club, events, retreats, masterminds, founders forum" />
       </Head>
-      <div className="relative min-h-screen bg-forest-900 bg-gradient-forest-textured bg-forest-textured-size bg-forest-textured-rep">
-        <TextureOverlay opacity={0.08} className="mix-blend-overlay" />
+      <div className="relative min-h-screen">
         <Navbar />
         {/* Hero section with full-bleed background */}
         <section className="relative min-h-[50vh] flex items-center justify-center pt-20 pb-16 overflow-hidden">

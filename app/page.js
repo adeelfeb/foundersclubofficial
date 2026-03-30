@@ -7,8 +7,8 @@ import VettedForImpact from '../components/designndev/VettedForImpact'
 import TestimonialsSection from '../components/designndev/TestimonialsSection'
 import PartnershipFormSection from '../components/designndev/PartnershipFormSection'
 import FaqSection from '../components/designndev/FaqSection'
+import NotarizationSection from '../components/designndev/NotarizationSection'
 import Footer from '../components/designndev/Footer'
-import TextureOverlay from '../components/designndev/TextureOverlay'
 
 export const metadata = {
   title: 'Founders Club | Private Network for 7-9 Figure Entrepreneurs',
@@ -26,7 +26,6 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="relative min-h-screen">
-      <TextureOverlay />
       <Navbar />
       <div className="relative w-full mx-auto">
         <FoundersClubHero />
@@ -36,6 +35,7 @@ export default function Home() {
         <PartnershipOpportunities />
         <TestimonialsSection />
         <FaqSection layout="section" />
+        <NotarizationSection />
         <PartnershipFormSection />
       </div>
       <Footer />

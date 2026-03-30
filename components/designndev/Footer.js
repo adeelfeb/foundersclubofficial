@@ -5,16 +5,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { foundersClubImages } from '../../lib/foundersClubImages'
 
-const services = [
-  { label: 'Wills & Estates', href: '#practice-areas' },
-  { label: 'Corporate Law', href: '#practice-areas' },
-  { label: 'Real Estate Law', href: '#practice-areas' },
-  { label: 'Immigration Law', href: '#practice-areas' },
+const quickLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About us', href: '/about-us' },
+  { label: 'Practice areas', href: '/practice-areas' },
+  { label: 'Our team', href: '/our-team' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Contact us', href: '/contact' },
 ]
 
-/** Slightly larger than header logo; intrinsic size keeps Next/Image sharp on retina */
+/** Logo scales with layout; extends slightly below bar on small screens */
 const FOOTER_LOGO_CLASS =
-  'h-14 w-auto sm:h-16 md:h-[4.75rem] lg:h-20 xl:h-24 2xl:h-[6.5rem] object-contain [image-rendering:auto]'
+  'h-12 w-auto sm:h-14 md:h-[4rem] lg:h-[4.5rem] xl:h-20 object-contain [image-rendering:auto]'
 
 function FooterNewsletter() {
   const [email, setEmail] = useState('')
@@ -49,11 +51,11 @@ function FooterNewsletter() {
   }
 
   return (
-    <div className="mt-5 max-w-sm">
-      <p className="font-subheading text-xs tracking-wide text-gold-200/90 uppercase mb-2">
+    <div className="w-full max-w-md lg:max-w-xl lg:ml-auto lg:text-right">
+      <p className="font-subheading text-xs tracking-wide text-gold-200/90 uppercase mb-2 lg:text-right">
         Email updates
       </p>
-      <form onSubmit={handleSubmit} className="relative flex flex-col gap-2 sm:flex-row sm:items-stretch">
+      <form onSubmit={handleSubmit} className="relative flex flex-col gap-2 sm:flex-row sm:items-stretch sm:justify-end">
         <label htmlFor="footer-newsletter-email" className="sr-only">
           Email address
         </label>
@@ -71,9 +73,9 @@ function FooterNewsletter() {
               setMessage('')
             }
           }}
-          placeholder="Your email"
+          placeholder="Enter your email"
           disabled={status === 'loading'}
-          className="flex-1 min-w-0 rounded-none border border-forest-600 bg-forest-900/80 px-3 py-2.5 text-sm text-gold-50 placeholder:text-gold-200/40 focus:border-gold-400/50 focus:outline-none focus:ring-1 focus:ring-gold-400/30 font-subheading"
+          className="flex-1 min-w-0 rounded-none border border-gold-500/35 bg-black/25 px-3 py-2.5 text-sm text-gold-50 placeholder:text-gold-200/45 focus:border-gold-400/60 focus:outline-none focus:ring-1 focus:ring-gold-400/35 font-subheading"
         />
         <input
           type="text"
@@ -88,14 +90,14 @@ function FooterNewsletter() {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="shrink-0 rounded-none bg-gold-500/90 px-4 py-2.5 text-sm font-sans text-forest-950 hover:bg-gold-400 transition-colors disabled:opacity-60"
+          className="shrink-0 rounded-none border border-gold-500/50 bg-gold-500/90 px-5 py-2.5 text-sm font-sans text-forest-950 hover:bg-gold-400 transition-colors disabled:opacity-60"
         >
-          {status === 'loading' ? '…' : 'Subscribe'}
+          {status === 'loading' ? '…' : 'Sign up'}
         </button>
       </form>
       {message && (
         <p
-          className={`mt-2 text-xs font-subheading ${status === 'error' ? 'text-red-300/90' : 'text-gold-300/90'}`}
+          className={`mt-2 text-xs font-subheading lg:text-right ${status === 'error' ? 'text-red-300/90' : 'text-gold-300/90'}`}
           role="status"
         >
           {message}
@@ -109,78 +111,114 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-forest-950 text-gold-100/90 border-t border-forest-800">
-      <section className="py-8 md:py-10">
+    <footer className="relative text-gold-100/90 border-t border-forest-800 overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${foundersClubImages.footerDecorBg})` }}
+        aria-hidden
+      />
+      <div className="absolute inset-0 bg-forest-950/88" aria-hidden />
+      <section className="relative z-10 py-8 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-10 lg:flex-row lg:gap-12 lg:justify-between lg:items-start">
-            {/* Logo + email capture */}
-            <div className="max-w-md shrink-0">
-              <Link href="/" className="inline-flex items-center leading-none no-underline hover:opacity-90 transition-opacity">
-                <Image
-                  src={foundersClubImages.logo}
-                  alt="Founders Club"
-                  width={1440}
-                  height={427}
-                  className={FOOTER_LOGO_CLASS}
-                  sizes="(max-width: 640px) 300px, (max-width: 1024px) 420px, (max-width: 1536px) 520px, 600px"
-                  quality={100}
-                />
-              </Link>
-              <FooterNewsletter />
+          {/* Top: logo flush left, signup right — separated by bottom rule */}
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12 pb-8 md:pb-10 border-b border-gold-400/25">
+            <Link
+              href="/"
+              className="inline-flex items-end leading-none no-underline hover:opacity-90 transition-opacity shrink-0 self-start"
+            >
+              <Image
+                src={foundersClubImages.logoFooter}
+                alt="Sahai Law"
+                width={1440}
+                height={427}
+                className={FOOTER_LOGO_CLASS}
+                sizes="(max-width: 640px) 260px, (max-width: 1024px) 360px, 480px"
+                quality={100}
+              />
+            </Link>
+            <FooterNewsletter />
+          </div>
+
+          <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
+            <div>
+              <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">
+                Office
+              </h4>
+              <ul className="space-y-2 text-sm font-subheading text-gold-100/85">
+                <li className="text-gold-50/95 font-medium">Sahai Law</li>
+                <li>Brampton, Ontario</li>
+                <li>
+                  <a
+                    href="tel:+14374515551"
+                    className="text-gold-100/85 hover:text-gold-300 transition-colors no-underline"
+                  >
+                    +1 437-451-5551
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:info@sahailaw.ca"
+                    className="text-gold-100/85 hover:text-gold-300 transition-colors no-underline"
+                  >
+                    info@sahailaw.ca
+                  </a>
+                </li>
+              </ul>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-10 flex-1 lg:max-w-3xl">
-              {/* Menu */}
-              <div>
-                <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Menu</h4>
-                <ul className="space-y-2 text-sm font-subheading">
-                  <li><Link href="/about-us" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">About Us</Link></li>
-                  <li><Link href="/our-team" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Team</Link></li>
-                  <li><Link href="/contact" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Contact Us</Link></li>
-                  <li><Link href="/partnerships" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">Partnerships</Link></li>
-                </ul>
-              </div>
-
-              {/* Services */}
-              <div>
-                <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Services</h4>
-                <ul className="space-y-2 text-sm font-subheading">
-                  {services.map((s) => (
-                    <li key={s.label}>
-                      <Link href={s.href} className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
-                        {s.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Get in touch */}
-              <div className="col-span-2 sm:col-span-1">
-                <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">Get in touch</h4>
-                <ul className="space-y-2 text-sm font-subheading">
-                  <li>
-                    <a href="mailto:info@sahailaw.ca" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
-                      info@sahailaw.ca
-                    </a>
+            <div>
+              <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">
+                Quick links
+              </h4>
+              <ul className="space-y-2 text-sm font-subheading">
+                {quickLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline"
+                    >
+                      {item.label}
+                    </Link>
                   </li>
-                  <li>
-                    <a href="tel:+14374515551" className="text-gold-100/80 hover:text-gold-300 transition-colors no-underline">
-                      +1 437-451-5551
-                    </a>
-                  </li>
-                  <li className="text-gold-100/70">Ontario, Canada</li>
-                </ul>
-              </div>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">
+                Hours
+              </h4>
+              <p className="text-sm font-subheading text-gold-100/85 leading-relaxed">
+                Monday – Friday
+                <br />
+                9:00 AM – 5:00 PM
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-subheading font-medium text-gold-200 text-xs tracking-wide uppercase mb-3">
+                Follow us
+              </h4>
+              <p className="text-sm font-subheading text-gold-100/70 mb-3">
+                Connect with Sahai Law for updates and insights.
+              </p>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-subheading text-gold-200 hover:text-gold-100 no-underline border border-gold-500/30 px-3 py-2 rounded-none hover:border-gold-400/50 transition-colors"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-3 md:py-4 border-t border-forest-800/80">
+      <section className="relative z-10 py-3 md:py-4 border-t border-forest-800/80 bg-forest-950/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gold-200/60 text-xs font-subheading">
-            © {currentYear} Founders Club. All rights reserved.
+            © {currentYear} Sahai Law. All rights reserved.
           </p>
         </div>
       </section>
