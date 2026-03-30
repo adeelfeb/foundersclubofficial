@@ -14,9 +14,9 @@ const quickLinks = [
   { label: 'Contact us', href: '/contact' },
 ]
 
-/** Logo scales with layout; extends slightly below bar on small screens */
+/** Footer mark — sized up to pair with header branding */
 const FOOTER_LOGO_CLASS =
-  'h-12 w-auto sm:h-14 md:h-[4rem] lg:h-[4.5rem] xl:h-20 object-contain [image-rendering:auto]'
+  'h-16 w-auto sm:h-[4.5rem] md:h-[5.25rem] lg:h-[6rem] xl:h-[6.75rem] 2xl:h-[7.25rem] object-contain [image-rendering:auto]'
 
 function FooterNewsletter() {
   const [email, setEmail] = useState('')
@@ -132,7 +132,7 @@ export default function Footer() {
                 width={1440}
                 height={427}
                 className={FOOTER_LOGO_CLASS}
-                sizes="(max-width: 640px) 260px, (max-width: 1024px) 360px, 480px"
+                sizes="(max-width: 640px) 360px, (max-width: 1024px) 480px, (max-width: 1536px) 600px, 680px"
                 quality={100}
               />
             </Link>

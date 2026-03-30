@@ -128,8 +128,8 @@ export default function Navbar() {
                   alt="Sahai Law"
                   width={1440}
                   height={427}
-                  className="h-[5rem] w-auto sm:h-[5.75rem] md:h-[6.5rem] lg:h-[7.25rem] xl:h-[8rem] 2xl:h-[8.75rem] object-contain [image-rendering:auto] -my-3 sm:-my-3.5 md:-my-4 lg:-my-[1.125rem] xl:-my-5 2xl:-my-[1.35rem]"
-                  sizes="(max-width: 640px) 380px, (max-width: 1024px) 480px, (max-width: 1536px) 580px, 680px"
+                  className="h-[6.5rem] w-auto sm:h-[7.25rem] md:h-[8rem] lg:h-[8.75rem] xl:h-[9.5rem] 2xl:h-[10.25rem] object-contain [image-rendering:auto] -my-4 sm:-my-[1.125rem] md:-my-5 lg:-my-[1.35rem] xl:-my-6 2xl:-my-[1.5rem]"
+                  sizes="(max-width: 640px) 480px, (max-width: 1024px) 600px, (max-width: 1536px) 720px, 820px"
                   quality={100}
                   priority
                 />

@@ -1,8 +1,6 @@
 'use client'
 
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { foundersClubImages } from '../../lib/foundersClubImages'
 
 const iconClientCentric = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" className="w-full h-full" fill="currentColor" aria-hidden>
@@ -14,6 +12,36 @@ const iconClientCentric = (
     <path d="M124.3,153.4c11.5,10.7,22.3,22,33.8,32.7l12.9-11.1,9.9,47.2-46-11.2,11.2-11.8-35.9-36.2,11.7-12.9c1.1.8,1.4,2.3,2.4,3.2Z" />
     <path d="M364.9,211c-14.7,2.9-29.7,8.1-44.3,11-2.1.4-1.7.3-1.6-1.6.5-13.3,9.8-31.3,9.9-45.4l11.2,10.6c.9.8,1.6.2,2.4,0,6.2-1.8,28.3-30.5,35.5-35.4l11.7,12.9-35.9,36.2,11.2,11.8Z" />
     <polygon points="258 100.5 258 152.6 275.4 152.6 250 192.4 224.5 152.6 241.9 152.6 241.9 100.5 258 100.5" />
+  </svg>
+)
+
+/**
+ * Trusted Advocacy — double-outline shield + check.
+ * Geometry from Lucide `shield-check` (ISC); inner shield is a scaled copy for the nested border look.
+ * @see https://lucide.dev/icons/shield-check
+ */
+const SHIELD_PATH =
+  'M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'
+
+const iconTrustedAdvocacy = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="w-full h-full overflow-visible"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.85}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden
+  >
+    <path d={SHIELD_PATH} vectorEffect="non-scaling-stroke" />
+    <g transform="translate(12 12) scale(0.74) translate(-12 -12)">
+      <path d={SHIELD_PATH} vectorEffect="non-scaling-stroke" />
+    </g>
+    <g transform="translate(12 12) scale(0.9) translate(-12 -12)">
+      <path d="m9 12 2 2 4-4" vectorEffect="non-scaling-stroke" />
+    </g>
   </svg>
 )
 
@@ -35,7 +63,7 @@ const items = [
       'Your goals are our priority. We take the time to understand your situation and provide personalized legal solutions designed around your needs.',
   },
   {
-    icon: 'image',
+    icon: iconTrustedAdvocacy,
     title: 'Trusted Advocacy',
     description:
       'We stand firmly by our clients, offering reliable and ethical representation every step of the way.',
@@ -47,21 +75,6 @@ const items = [
       'Every case is handled with a focused strategy, ensuring strong representation and attention to detail.',
   },
 ]
-
-function ItemIcon({ item }) {
-  if (item.icon === 'image') {
-    return (
-      <Image
-        src={foundersClubImages.iconTrustedAdvocacy}
-        alt="Trusted Advocacy"
-        width={160}
-        height={160}
-        className="w-16 h-16 md:w-20 md:h-20 object-contain"
-      />
-    )
-  }
-  return item.icon
-}
 
 export default function IconBoxSection() {
   return (
@@ -78,8 +91,15 @@ export default function IconBoxSection() {
               className="border border-gold-400/25 bg-forest-950/40 p-5 md:p-6 hover:border-gold-400/50 transition-colors duration-300"
             >
               <div className="flex items-start gap-4 md:gap-5">
-                <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 text-gold-400" aria-hidden>
-                  <ItemIcon item={item} />
+                <div
+                  className={`flex-shrink-0 text-gold-400 ${
+                    item.title === 'Trusted Advocacy'
+                      ? 'w-[4.5rem] h-[4.5rem] md:w-[5.75rem] md:h-[5.75rem]'
+                      : 'w-16 h-16 md:w-20 md:h-20'
+                  }`}
+                  aria-hidden
+                >
+                  {item.icon}
                 </div>
                 <div>
                   <h3 className="font-heading text-xl md:text-2xl font-semibold text-gold-200 leading-tight">
