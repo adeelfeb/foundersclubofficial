@@ -60,8 +60,8 @@ export default function LetsChatForm() {
   }
 
   const inputClass =
-    'w-full px-4 py-3 rounded-none text-left bg-black/55 backdrop-blur-sm border border-gold-500/25 text-gold-50 placeholder:text-gold-200/45 focus:ring-2 focus:ring-gold-400/35 focus:border-gold-400/55 outline-none transition-all'
-  const labelClass = 'block text-sm font-medium text-gold-200/95 mb-2 text-left'
+    'w-full px-4 py-3 rounded-none text-left bg-white border border-gold-400/35 text-black placeholder:text-neutral-500 focus:ring-2 focus:ring-gold-400/25 focus:border-gold-500/55 outline-none transition-all'
+  const labelClass = 'block text-sm font-medium text-black mb-2 text-left'
 
   return (
     <div className="w-full max-w-none text-left">

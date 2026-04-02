@@ -21,7 +21,7 @@ export default function FreeConsultationSection({ animated = true }) {
           By getting in touch, we provide an opportunity to support you at the right time and to make the right decision. Our team is looking forward to hearing from you and assisting you with a wide range of matters.
         </p>
       </div>
-      <div className="rounded-none border border-forest-600 p-6 md:p-8 fc-card flex flex-col min-h-0 w-full min-w-0">
+      <div className="rounded-none border border-gold-400/25 bg-white p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.06)] flex flex-col min-h-0 w-full min-w-0">
         <LetsChatForm />
       </div>
     </>
@@ -58,7 +58,7 @@ export default function FreeConsultationSection({ animated = true }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="rounded-none border border-forest-600 p-6 md:p-8 fc-card flex flex-col min-h-0 w-full min-w-0"
+        className="rounded-none border border-gold-400/25 bg-white p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.06)] flex flex-col min-h-0 w-full min-w-0"
       >
         <LetsChatForm />
       </motion.div>
