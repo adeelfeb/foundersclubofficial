@@ -8,7 +8,7 @@ import { foundersClubImages } from '../../lib/foundersClubImages'
 
 export default function FoundersClubHero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-neutral-950 border-b-8 border-gold-500">
+    <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-neutral-950">
       <div className="absolute inset-0 w-full h-full" aria-hidden>
         <Image
           src={foundersClubImages.homeHeroBg}
@@ -90,7 +90,7 @@ export default function FoundersClubHero() {
           ].map((card) => (
             <div
               key={card.title}
-              className="border border-gold-400/30 bg-black/55 backdrop-blur-md px-5 py-4"
+              className="border border-gold-400/30 border-b-8 border-b-gold-500 bg-black/55 backdrop-blur-md px-5 py-4"
             >
               <div className="font-heading text-lg md:text-xl font-medium text-gold-200 mb-1.5">
                 {card.title}
