@@ -8,7 +8,7 @@ import { foundersClubImages } from '../../lib/foundersClubImages'
 
 export default function FoundersClubHero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-start pt-24 pb-16 overflow-hidden bg-neutral-950">
+    <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-neutral-950 border-b-8 border-gold-500">
       <div className="absolute inset-0 w-full h-full" aria-hidden>
         <Image
           src={foundersClubImages.homeHeroBg}
@@ -34,8 +34,8 @@ export default function FoundersClubHero() {
         aria-hidden
       />
 
-      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-left">
-        <div className="max-w-3xl">
+      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 text-center">
+        <div className="max-w-3xl mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function FoundersClubHero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-gold-100/95 text-base sm:text-lg md:text-xl leading-relaxed font-subheading max-w-2xl"
+            className="text-gold-100/95 text-base sm:text-lg md:text-xl leading-relaxed font-subheading max-w-2xl mx-auto"
           >
             Practical legal guidance with clear next steps—built for busy families and business owners.
           </motion.p>
@@ -65,7 +65,7 @@ export default function FoundersClubHero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-7 flex flex-wrap items-center gap-3"
+            className="mt-7 flex flex-wrap items-center justify-center gap-3"
           >
             <Link
               href="/contact"
@@ -74,12 +74,6 @@ export default function FoundersClubHero() {
               <FaWhatsapp className="w-5 h-5 shrink-0 text-gold-700" aria-hidden />
               Book a Free Call
             </Link>
-            <Link
-              href="/practice-areas"
-              className="btn-fc-secondary text-sm sm:text-base px-6 sm:px-8 py-3 no-underline inline-flex items-center gap-2"
-            >
-              View Practice Areas
-            </Link>
           </motion.div>
         </div>
 
@@ -87,7 +81,7 @@ export default function FoundersClubHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-5xl"
+          className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto text-center"
         >
           {[
             { title: 'Family Law', body: 'Separation, parenting, support, and agreements.' },
