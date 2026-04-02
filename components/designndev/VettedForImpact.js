@@ -29,7 +29,7 @@ export default function VettedForImpact() {
                 Delaying legal advice or relying on incorrect guidance can negatively impact your case. Take the first step with confidence. Contact us today to schedule your confidential, no-obligation consultation with one of our experienced legal professionals.
               </p>
             </div>
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-forest-800">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-black/35 border border-gold-400/20">
               <Image
                 src="/images/24.jpg"
                 alt="Sahai Law"

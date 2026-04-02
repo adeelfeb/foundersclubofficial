@@ -71,7 +71,7 @@ export default function FoundersClubHero() {
               href="/contact"
               className="btn-fc-primary text-sm sm:text-base px-6 sm:px-8 py-3 no-underline inline-flex items-center gap-2"
             >
-              <FaWhatsapp className="w-5 h-5 shrink-0 text-emerald-700" aria-hidden />
+              <FaWhatsapp className="w-5 h-5 shrink-0 text-gold-700" aria-hidden />
               Book a Free Call
             </Link>
             <Link

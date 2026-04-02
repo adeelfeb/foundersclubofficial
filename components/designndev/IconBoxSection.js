@@ -78,7 +78,18 @@ const items = [
 
 export default function IconBoxSection() {
   return (
-    <section className="py-12 md:py-16 relative overflow-hidden bg-gradient-to-b from-forest-900/70 via-forest-950/90 to-black/90">
+    <section className="py-12 md:py-16 relative overflow-hidden">
+      {/* Header-style glass background */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-md" aria-hidden />
+      <div className="absolute inset-0 nav-gold-line opacity-80" aria-hidden />
+      <div
+        className="absolute inset-0 opacity-45"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 60% at 20% 10%, rgba(165,139,128,0.12) 0%, transparent 55%), linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%)',
+        }}
+        aria-hidden
+      />
       <div className="relative z-10 w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {items.map((item, i) => (
@@ -88,7 +99,7 @@ export default function IconBoxSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="border border-gold-400/25 bg-forest-950/40 p-5 md:p-6 hover:border-gold-400/50 transition-colors duration-300"
+              className="border border-gold-400/25 bg-black/35 backdrop-blur-sm p-5 md:p-6 hover:border-gold-400/50 transition-colors duration-300"
             >
               <div className="flex items-start gap-4 md:gap-5">
                 <div

@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
   const goNext = () => setIndex((i) => (i + 1) % total)
 
   return (
-    <section className="py-16 md:py-24 bg-forest-800 relative overflow-hidden">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Background image from temp */}
       <div className="absolute inset-0">
         <Image
@@ -51,8 +51,17 @@ export default function TestimonialsSection() {
           priority={false}
         />
       </div>
-      <div className="absolute inset-0 bg-forest-900/55" aria-hidden />
-      <div className="absolute inset-0 bg-forest-800/40" aria-hidden />
+      {/* Header-style glass overlay */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-md" aria-hidden />
+      <div className="absolute inset-0 nav-gold-line opacity-55" aria-hidden />
+      <div
+        className="absolute inset-0 opacity-55"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 60% at 30% 15%, rgba(165,139,128,0.14) 0%, transparent 55%), linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.82) 100%)',
+        }}
+        aria-hidden
+      />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2

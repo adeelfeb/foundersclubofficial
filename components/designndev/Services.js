@@ -21,7 +21,7 @@ export default function Services() {
       icon: Layout,
       title: 'CMS Development (WordPress & Webflow)',
       description: 'Need flexibility? We build robust websites using WordPress and Webflow that allow you to manage your content easily. We offer custom theme development and plugin integrations.',
-      gradient: 'from-green-600 to-emerald-600',
+      gradient: 'from-gold-500 to-gold-700',
     },
     {
       icon: ShoppingCart,

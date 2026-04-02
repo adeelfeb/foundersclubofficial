@@ -117,7 +117,17 @@ export default function Footer() {
         style={{ backgroundImage: `url(${foundersClubImages.footerDecorBg})` }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-forest-950/88" aria-hidden />
+      {/* Layered overlay: darken + rose-gold tint + subtle noise for readability */}
+      <div className="absolute inset-0 bg-forest-950/92" aria-hidden />
+      <div
+        className="absolute inset-0 opacity-55"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 60% at 30% 25%, rgba(165,139,128,0.18) 0%, transparent 55%), linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.75) 65%, rgba(0,0,0,0.85) 100%)',
+        }}
+        aria-hidden
+      />
+      <div className="absolute inset-0 opacity-20 bg-noise-subtle" aria-hidden />
       <section className="relative z-10 py-8 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top: logo flush left, signup right — separated by bottom rule */}

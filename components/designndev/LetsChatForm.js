@@ -60,14 +60,14 @@ export default function LetsChatForm() {
   }
 
   const inputClass =
-    'w-full px-4 py-3 rounded-none text-left bg-forest-900/85 border border-gold-500/25 text-gold-50 placeholder:text-gold-200/45 focus:ring-2 focus:ring-gold-400/35 focus:border-gold-400/55 outline-none transition-all'
+    'w-full px-4 py-3 rounded-none text-left bg-black/55 backdrop-blur-sm border border-gold-500/25 text-gold-50 placeholder:text-gold-200/45 focus:ring-2 focus:ring-gold-400/35 focus:border-gold-400/55 outline-none transition-all'
   const labelClass = 'block text-sm font-medium text-gold-200/95 mb-2 text-left'
 
   return (
     <div className="w-full max-w-none text-left">
       <form onSubmit={handleSubmit} className="space-y-5 relative w-full text-left">
         {isSubmitting && (
-          <div className="absolute inset-0 rounded-none bg-forest-800/60 backdrop-blur-sm z-10 pointer-events-auto" aria-hidden />
+          <div className="absolute inset-0 rounded-none bg-black/55 backdrop-blur-md z-10 pointer-events-auto" aria-hidden />
         )}
         <div>
           <label htmlFor="letschat-email" className={labelClass}>Email Address *</label>

@@ -20,16 +20,16 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
-        // Founders Club – vibrant forest + rose-gold with gradient-friendly shades
+        // Founders Club – background shades (was forest green)
         forest: {
-          950: '#020c08',
-          900: '#0d261c',
-          800: '#1a3328',
-          700: '#1e4234',
-          600: '#255540',
-          500: '#2d6b52',
-          400: '#3d8a6a',
-          350: '#4a9d7a',
+          950: '#070707',
+          900: '#0B0B0C',
+          800: '#111113',
+          700: '#18181B',
+          600: '#202024',
+          500: '#2B2B30',
+          400: '#3A3A40',
+          350: '#44444B',
         },
         gold: {
           50: '#FBF6F4',
@@ -59,9 +59,9 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-gold': 'linear-gradient(135deg, #F4EDE9 0%, #D7B8AE 40%, #A58B80 100%)',
-        'gradient-forest': 'linear-gradient(180deg, #0d261c 0%, #1a3328 25%, #1e4234 45%, #2d6b52 52%, #1e4234 58%, #255540 80%, #0d261c 100%)',
-        'gradient-forest-subtle-glow': 'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(45,107,82,0.18) 0%, transparent 55%), linear-gradient(180deg, #0d261c 0%, #1a3328 25%, #1e4234 45%, #255540 80%, #0d261c 100%)',
-        'gradient-forest-textured': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E\"), radial-gradient(ellipse 80% 50% at 50% 20%, rgba(45,107,82,0.18) 0%, transparent 55%), linear-gradient(180deg, #0d261c 0%, #1a3328 25%, #1e4234 45%, #255540 80%, #0d261c 100%)",
+        'gradient-forest': 'linear-gradient(180deg, #0B0B0C 0%, #111113 25%, #18181B 45%, #202024 70%, #111113 100%)',
+        'gradient-forest-subtle-glow': 'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(165,139,128,0.12) 0%, transparent 55%), linear-gradient(180deg, #0B0B0C 0%, #111113 25%, #18181B 45%, #202024 70%, #0B0B0C 100%)',
+        'gradient-forest-textured': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E\"), radial-gradient(ellipse 80% 50% at 50% 20%, rgba(165,139,128,0.10) 0%, transparent 55%), linear-gradient(180deg, #0B0B0C 0%, #111113 25%, #18181B 45%, #202024 70%, #0B0B0C 100%)",
         'gradient-gold-subtle': 'linear-gradient(180deg, rgba(244,237,233,0.12) 0%, rgba(165,139,128,0.06) 100%)',
         'footer-pattern': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='24' viewBox='0 0 56 24'%3E%3Cpath fill='%23A58B80' fill-opacity='0.12' fill-rule='evenodd' d='M0 8h8V4h8V0h8v4h8v4h8v8h-8v4h-8v4h-8v-4H8v-4H0V8zm16 0v4h8V8h-8zm16 4v4h8v-4h-8z'/%3E%3C/svg%3E\")",
         'noise-subtle': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E\")",

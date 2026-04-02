@@ -246,7 +246,7 @@ export default function SignupPage() {
                 <div
                   className={`rounded-lg border px-4 py-3 text-sm font-medium mb-6 ${
                     error.startsWith('✓')
-                      ? 'border-emerald-800/60 bg-emerald-900/20 text-emerald-200'
+                      ? 'border-gold-500/40 bg-gold-500/10 text-gold-200'
                       : 'border-red-800/60 bg-red-900/20 text-red-200'
                   }`}
                   role="alert"

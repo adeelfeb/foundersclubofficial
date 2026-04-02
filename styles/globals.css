@@ -38,11 +38,11 @@
   --font-sans: Arial, Helvetica, 'Helvetica Neue', sans-serif;
   --font-heading: 'Juana', Georgia, 'Times New Roman', serif;
   --font-subheading: Arial, Helvetica, 'Helvetica Neue', sans-serif;
-  /* Founders Club – rose-gold + forest with gradient/texture */
-  --fc-forest-950: #020c08;
-  --fc-forest-800: #1a3328;
-  --fc-forest-700: #1e4234;
-  --fc-forest-600: #255540;
+  /* Founders Club – rose-gold + background shades (no green) */
+  --fc-forest-950: #070707;
+  --fc-forest-800: #111113;
+  --fc-forest-700: #18181B;
+  --fc-forest-600: #202024;
   --fc-gold-50: #FBF6F4;
   --fc-gold-300: #D7B8AE;
   --fc-gold-400: #C39F94;

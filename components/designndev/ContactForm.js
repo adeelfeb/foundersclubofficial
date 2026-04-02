@@ -161,7 +161,7 @@ export default function ContactForm({ showHeading = true }) {
                   transition={{ duration: 0.25 }}
                   className={`overflow-hidden p-4 rounded-xl border ${
                     submitStatus.type === 'success'
-                      ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
+                      ? 'bg-gold-50/95 text-forest-950 border-gold-300/60'
                       : 'bg-red-50 text-red-800 border-red-200'
                   }`}
                 >
