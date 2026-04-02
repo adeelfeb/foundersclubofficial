@@ -6,7 +6,11 @@ const nextConfig = {
 
   // No /fundraising route in app — old links or hosting rules may still hit this URL
   async redirects() {
-    return [{ source: '/fundraising', destination: '/', permanent: false }]
+    return [
+      { source: '/fundraising', destination: '/', permanent: false },
+      // Legacy/incorrect header links sometimes point here
+      { source: '/about', destination: '/about-us', permanent: true },
+    ]
   },
   
   // Vercel deployment optimizations

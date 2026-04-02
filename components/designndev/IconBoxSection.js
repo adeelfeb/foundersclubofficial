@@ -78,15 +78,16 @@ const items = [
 
 export default function IconBoxSection() {
   return (
-    <section className="py-12 md:py-16 relative overflow-hidden">
-      {/* Header-style glass background */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-md" aria-hidden />
-      <div className="absolute inset-0 nav-gold-line opacity-80" aria-hidden />
+    <section className="py-12 md:py-16 relative overflow-hidden bg-gold-50 border-y border-gold-300/25">
       <div
-        className="absolute inset-0 opacity-45"
+        className="absolute inset-0 bg-noise-subtle opacity-[0.35] pointer-events-none"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 70% 60% at 20% 10%, rgba(165,139,128,0.12) 0%, transparent 55%), linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%)',
+            'radial-gradient(ellipse 85% 55% at 50% -10%, rgba(165,139,128,0.18) 0%, transparent 52%), radial-gradient(ellipse 60% 40% at 100% 100%, rgba(232,215,209,0.5) 0%, transparent 45%)',
         }}
         aria-hidden
       />
@@ -99,11 +100,11 @@ export default function IconBoxSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="border border-gold-400/25 bg-black/35 backdrop-blur-sm p-5 md:p-6 hover:border-gold-400/50 transition-colors duration-300"
+              className="border border-gold-400/30 bg-white p-5 md:p-6 shadow-[0_10px_32px_rgba(43,43,48,0.07)] hover:border-gold-500/45 hover:shadow-fc-gold-md transition-all duration-300"
             >
               <div className="flex items-start gap-4 md:gap-5">
                 <div
-                  className={`flex-shrink-0 text-gold-400 ${
+                  className={`flex-shrink-0 text-gold-600 ${
                     item.title === 'Trusted Advocacy'
                       ? 'w-[4.5rem] h-[4.5rem] md:w-[5.75rem] md:h-[5.75rem]'
                       : 'w-16 h-16 md:w-20 md:h-20'
@@ -113,10 +114,10 @@ export default function IconBoxSection() {
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="font-heading text-xl md:text-2xl font-semibold text-gold-200 leading-tight">
+                  <h3 className="font-heading text-xl md:text-2xl font-semibold text-forest-900 leading-tight">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm md:text-base text-gold-100/90 leading-relaxed">
+                  <p className="mt-3 text-sm md:text-base text-forest-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
