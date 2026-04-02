@@ -126,7 +126,7 @@ export default function LetsChatForm() {
           disabled={isSubmitting}
           whileHover={!isSubmitting ? { scale: 1.01 } : {}}
           whileTap={!isSubmitting ? { scale: 0.99 } : {}}
-          className="w-full py-2.5 px-4 text-sm font-medium text-forest-950 bg-gold-500 border border-gold-500 rounded-none hover:bg-gold-400 hover:border-gold-400 transition-all flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
+          className="w-full py-2.5 px-4 text-sm font-medium text-black bg-gold-500 border border-gold-500 rounded-none hover:bg-gold-400 hover:border-gold-400 transition-all flex items-center justify-center gap-1.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-fc-gold"
         >
           {isSubmitting ? (
             <><Loader2 className="w-4 h-4 animate-spin" /> Submitting…</>

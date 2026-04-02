@@ -29,17 +29,28 @@ const opportunities = [
 export default function PartnershipOpportunities() {
   return (
     <section className="py-16 md:py-24 section-divider-gold relative">
+      {/* Header-style glass background for consistency */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-md" aria-hidden />
+      <div className="absolute inset-0 nav-gold-line opacity-65" aria-hidden />
+      <div
+        className="absolute inset-0 opacity-50"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 60% at 25% 15%, rgba(165,139,128,0.12) 0%, transparent 55%), linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.72) 75%, rgba(0,0,0,0.82) 100%)',
+        }}
+        aria-hidden
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 text-left mb-12 md:mb-16 normal-case"
+          className="relative z-10 section-heading font-heading text-4xl md:text-5xl font-medium text-gold-500 text-left mb-12 md:mb-16 normal-case"
         >
           <span className="text-white">Partnership</span> Opportunities
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {opportunities.map((item, i) => (
             <motion.div
               key={item.title}
@@ -47,7 +58,7 @@ export default function PartnershipOpportunities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="fc-card p-6 md:p-8 flex flex-col"
+              className="border border-gold-400/25 bg-black/55 backdrop-blur-md p-6 md:p-8 flex flex-col"
             >
               <div className="mb-4 flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-gold-400/10 text-gold-400">
@@ -67,7 +78,7 @@ export default function PartnershipOpportunities() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="flex justify-center mt-12"
+          className="relative z-10 flex justify-center mt-12"
         >
           <svg className="w-6 h-6 text-gold-500/60" fill="currentColor" viewBox="0 0 24 24">
             <path d="M7 10l5 5 5-5z" />

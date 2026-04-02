@@ -96,12 +96,12 @@ export default function FoundersClubHero() {
           ].map((card) => (
             <div
               key={card.title}
-              className="fc-card border border-gold-400/30 bg-black/25 backdrop-blur-sm px-5 py-4"
+              className="border border-gold-400/30 bg-black/55 backdrop-blur-md px-5 py-4"
             >
-              <div className="font-heading text-lg md:text-xl font-medium text-gold-50 mb-1.5">
+              <div className="font-heading text-lg md:text-xl font-medium text-gold-200 mb-1.5">
                 {card.title}
               </div>
-              <div className="text-sm md:text-base text-gold-100/85 font-subheading leading-relaxed">
+              <div className="text-sm md:text-base text-gold-100/80 font-subheading leading-relaxed">
                 {card.body}
               </div>
             </div>
