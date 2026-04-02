@@ -170,7 +170,7 @@ export default function Reviews() {
                       {[...Array(review.rating)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                          className="w-4 h-4 fill-gold-400 text-gold-400"
                         />
                       ))}
                     </div>

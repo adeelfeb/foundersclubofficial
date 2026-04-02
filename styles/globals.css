@@ -38,15 +38,15 @@
   --font-sans: Arial, Helvetica, 'Helvetica Neue', sans-serif;
   --font-heading: 'Juana', Georgia, 'Times New Roman', serif;
   --font-subheading: Arial, Helvetica, 'Helvetica Neue', sans-serif;
-  /* Founders Club – vibrant gold + forest with gradient/texture */
+  /* Founders Club – rose-gold + forest with gradient/texture */
   --fc-forest-950: #020c08;
   --fc-forest-800: #1a3328;
   --fc-forest-700: #1e4234;
   --fc-forest-600: #255540;
-  --fc-gold-50: #FBF6E8;
-  --fc-gold-400: #D4AF37;
-  --fc-gold-500: #C9A227;
-  --fc-gold-300: #E2CF9E;
+  --fc-gold-50: #FBF6F4;
+  --fc-gold-300: #D7B8AE;
+  --fc-gold-400: #C39F94;
+  --fc-gold-500: #A58B80;
   /* Fixed Navbar – menu overlay top; ≈ vertical padding + logo (see components/designndev/Navbar.js) */
   --fc-navbar-height: 3.5rem;
   /* Local brand backgrounds — public/images/background */
@@ -253,12 +253,12 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   border-radius: 0;
   text-decoration: none !important;
   transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 2px 8px rgba(165, 139, 128, 0.25);
 }
 .btn-fc-primary:hover {
   background-color: var(--fc-gold-400);
   border-color: var(--fc-gold-300);
-  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 16px rgba(165, 139, 128, 0.35);
   text-decoration: none !important;
 }
 
@@ -279,7 +279,7 @@ a:hover:not(nav a):not(.btn-fc-primary):not(.btn-fc-secondary) {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .btn-fc-secondary:hover {
-  background-color: rgba(212, 175, 55, 0.12);
+  background-color: rgba(165, 139, 128, 0.12);
   color: var(--fc-gold-300);
   border-color: var(--fc-gold-400);
 }

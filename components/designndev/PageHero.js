@@ -5,11 +5,11 @@ import Image from 'next/image'
  * Interior pages use the shared hero art so routes work even if per-page PNGs are not added yet.
  */
 export const PAGE_HERO_IMAGES = {
-  aboutUs: 'FRONT IMAGE.png',
-  contact: 'FRONT IMAGE.png',
-  faq: 'FRONT IMAGE.png',
-  services: 'FRONT IMAGE.png',
-  ourTeam: 'FRONT IMAGE.png',
+  aboutUs: 'About us image.png',
+  contact: 'contact us image.png',
+  faq: 'Faqs image.png',
+  services: 'our services.png',
+  ourTeam: 'our team image.png',
 }
 
 /**

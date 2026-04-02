@@ -20,7 +20,7 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
-        // Founders Club – vibrant forest + gold with gradient-friendly shades
+        // Founders Club – vibrant forest + rose-gold with gradient-friendly shades
         forest: {
           950: '#020c08',
           900: '#0d261c',
@@ -32,14 +32,14 @@ module.exports = {
           350: '#4a9d7a',
         },
         gold: {
-          50: '#FBF6E8',
-          100: '#F7F0DE',
-          200: '#EDE2C4',
-          300: '#E2CF9E',
-          400: '#D4AF37',
-          500: '#C9A227',
-          600: '#B8962e',
-          700: '#9a7b26',
+          50: '#FBF6F4',
+          100: '#F4EDE9',
+          200: '#E8D7D1',
+          300: '#D7B8AE',
+          400: '#C39F94',
+          500: '#A58B80',
+          600: '#8C7268',
+          700: '#705A53',
         },
       },
       fontFamily: {
@@ -53,17 +53,17 @@ module.exports = {
         'fc-xl': '1rem',
       },
       boxShadow: {
-        'fc-gold': '0 1px 3px rgba(212, 175, 55, 0.2)',
-        'fc-gold-md': '0 4px 16px rgba(212, 175, 55, 0.28)',
-        'fc-gold-lg': '0 6px 24px rgba(201, 162, 39, 0.25)',
+        'fc-gold': '0 1px 3px rgba(165, 139, 128, 0.2)',
+        'fc-gold-md': '0 4px 16px rgba(165, 139, 128, 0.28)',
+        'fc-gold-lg': '0 6px 24px rgba(140, 114, 104, 0.25)',
       },
       backgroundImage: {
-        'gradient-gold': 'linear-gradient(135deg, #F7F0DE 0%, #E2CF9E 40%, #D4AF37 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #F4EDE9 0%, #D7B8AE 40%, #A58B80 100%)',
         'gradient-forest': 'linear-gradient(180deg, #0d261c 0%, #1a3328 25%, #1e4234 45%, #2d6b52 52%, #1e4234 58%, #255540 80%, #0d261c 100%)',
         'gradient-forest-subtle-glow': 'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(45,107,82,0.18) 0%, transparent 55%), linear-gradient(180deg, #0d261c 0%, #1a3328 25%, #1e4234 45%, #255540 80%, #0d261c 100%)',
         'gradient-forest-textured': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E\"), radial-gradient(ellipse 80% 50% at 50% 20%, rgba(45,107,82,0.18) 0%, transparent 55%), linear-gradient(180deg, #0d261c 0%, #1a3328 25%, #1e4234 45%, #255540 80%, #0d261c 100%)",
-        'gradient-gold-subtle': 'linear-gradient(180deg, rgba(247,240,222,0.12) 0%, rgba(212,175,55,0.06) 100%)',
-        'footer-pattern': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='24' viewBox='0 0 56 24'%3E%3Cpath fill='%23D4AF37' fill-opacity='0.12' fill-rule='evenodd' d='M0 8h8V4h8V0h8v4h8v4h8v8h-8v4h-8v4h-8v-4H8v-4H0V8zm16 0v4h8V8h-8zm16 4v4h8v-4h-8z'/%3E%3C/svg%3E\")",
+        'gradient-gold-subtle': 'linear-gradient(180deg, rgba(244,237,233,0.12) 0%, rgba(165,139,128,0.06) 100%)',
+        'footer-pattern': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='24' viewBox='0 0 56 24'%3E%3Cpath fill='%23A58B80' fill-opacity='0.12' fill-rule='evenodd' d='M0 8h8V4h8V0h8v4h8v4h8v8h-8v4h-8v4h-8v-4H8v-4H0V8zm16 0v4h8V8h-8zm16 4v4h8v-4h-8z'/%3E%3C/svg%3E\")",
         'noise-subtle': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E\")",
       },
       backgroundRepeat: {

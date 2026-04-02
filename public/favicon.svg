@@ -1,8 +1,8 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="goldGrad" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#F4D47A" />
-      <stop offset="1" stop-color="#B88A2A" />
+      <stop offset="0" stop-color="#D7B8AE" />
+      <stop offset="1" stop-color="#8C7268" />
     </linearGradient>
   </defs>
   <rect x="3" y="3" width="58" height="58" rx="12" fill="#0E1411" />

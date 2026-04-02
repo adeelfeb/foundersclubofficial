@@ -27,7 +27,7 @@ export default function PracticeAreasSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="group relative aspect-[4/5] min-h-[300px] sm:min-h-[340px] lg:min-h-[360px] w-full overflow-hidden rounded-lg border border-forest-600/60 transition-all duration-300 hover:border-gold-400/90 hover:shadow-[0_0_0_1px_rgba(212,175,55,0.5),0_0_20px_rgba(212,175,55,0.15)]"
+              className="group relative aspect-[4/5] min-h-[300px] sm:min-h-[340px] lg:min-h-[360px] w-full overflow-hidden rounded-lg border border-forest-600/60 transition-all duration-300 hover:border-gold-400/90 hover:shadow-[0_0_0_1px_rgba(165,139,128,0.5),0_0_20px_rgba(165,139,128,0.15)]"
             >
               {/* Background image */}
               <div className="absolute inset-0">
