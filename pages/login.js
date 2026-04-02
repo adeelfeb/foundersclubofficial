@@ -290,8 +290,11 @@ export default function LoginPage() {
     }
   }
 
-  const fieldClass = 'block w-full rounded-lg border border-forest-600 bg-forest-800/80 px-4 py-3 text-gold-100 placeholder:text-gold-200/50 focus:border-gold-500/60 focus:outline-none focus:ring-2 focus:ring-gold-500/30 disabled:opacity-60'
-  const labelClass = 'text-sm font-semibold text-gold-300 mb-1.5'
+  const fieldClass =
+    'block w-full rounded-lg border border-gold-500/25 bg-black/55 backdrop-blur-sm px-4 py-3.5 text-gold-50 placeholder:text-gold-200/45 focus:border-gold-400/60 focus:outline-none focus:ring-2 focus:ring-gold-400/25 disabled:opacity-60'
+  const labelClass = 'text-sm font-semibold text-gold-200/95 mb-2 block text-left'
+  const cardClass =
+    'rounded-2xl border border-gold-400/25 bg-black/60 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.35)]'
 
   if (checkingAuth) {
     return (
@@ -300,11 +303,21 @@ export default function LoginPage() {
           <title>Member Login | Founders Club</title>
           <meta name="description" content="Sign in to your Founders Club account." />
         </Head>
-        <div className="min-h-screen relative">
+        <div className="min-h-screen relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-[2px]" aria-hidden />
+          <div className="absolute inset-0 nav-gold-line opacity-40" aria-hidden />
+          <div
+            className="absolute inset-0 opacity-50"
+            style={{
+              background:
+                'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(165,139,128,0.12) 0%, transparent 50%), linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 100%)',
+            }}
+            aria-hidden
+          />
           <Navbar />
-          <main className="relative z-10 pt-20 pb-20 flex items-center justify-center min-h-[50vh]">
-            <div className="w-full max-w-md mx-auto px-4">
-              <div className="fc-card rounded-2xl border border-forest-600 p-6 md:p-8">
+          <main className="relative z-10 pt-24 pb-24 flex items-center justify-center min-h-[50vh]">
+            <div className="w-full max-w-lg mx-auto px-4 sm:px-6">
+              <div className={`${cardClass} p-8 md:p-10`}>
                 <AuthCardSkeleton />
               </div>
             </div>
@@ -322,19 +335,29 @@ export default function LoginPage() {
         <meta name="description" content="Sign in to your Founders Club account." />
         <meta name="keywords" content="Founders Club, login, member login" />
       </Head>
-      <div className="min-h-screen relative">
+      <div className="min-h-screen relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-[2px]" aria-hidden />
+        <div className="absolute inset-0 nav-gold-line opacity-40" aria-hidden />
+        <div
+          className="absolute inset-0 opacity-50"
+          style={{
+            background:
+              'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(165,139,128,0.12) 0%, transparent 50%), linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 100%)',
+          }}
+          aria-hidden
+        />
         <Navbar />
-        <main className="relative z-10 pt-20 pb-20">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
-            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-500 mb-4">
+        <main className="relative z-10 pt-24 pb-24">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10 md:mb-12">
+            <h1 className="font-heading text-4xl md:text-5xl font-semibold text-gold-400 mb-4">
               Member Login
             </h1>
-            <p className="text-gold-100/90 text-lg">
+            <p className="text-gold-100/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               Sign in to access your Founders Club account and member resources.
             </p>
           </div>
-          <div className="max-w-md mx-auto px-4">
-            <div className="fc-card rounded-2xl border border-forest-600 p-6 md:p-8">
+          <div className="max-w-lg mx-auto px-4 sm:px-6">
+            <div className={`${cardClass} p-8 md:p-10`}>
               {error && (
                 <div
                   className="rounded-lg border border-red-800/60 bg-red-900/20 px-4 py-3 text-red-200 text-sm font-medium mb-6"
@@ -370,7 +393,7 @@ export default function LoginPage() {
                     <button type="submit" disabled={isVerifyDisabled} className="btn-fc-primary w-full justify-center py-3">
                       {loading && (
                         <span
-                          className="inline-block h-4 w-4 rounded-full border-2 border-forest-950/40 border-t-gold-400 animate-spin"
+                          className="inline-block h-4 w-4 rounded-full border-2 border-black/40 border-t-gold-400 animate-spin"
                           aria-hidden
                         />
                       )}
@@ -436,7 +459,7 @@ export default function LoginPage() {
                     <button type="submit" disabled={isDisabled} className="btn-fc-primary w-full justify-center py-3">
                       {loading && (
                         <span
-                          className="inline-block h-4 w-4 rounded-full border-2 border-forest-950/40 border-t-gold-400 animate-spin"
+                          className="inline-block h-4 w-4 rounded-full border-2 border-black/40 border-t-gold-400 animate-spin"
                           aria-hidden
                         />
                       )}
@@ -446,7 +469,7 @@ export default function LoginPage() {
                 </>
               )}
 
-              <footer className="mt-8 pt-6 border-t border-forest-600/60 flex flex-wrap justify-center items-center gap-2 text-sm text-gold-100/80">
+              <footer className="mt-8 pt-6 border-t border-gold-500/20 flex flex-wrap justify-center items-center gap-2 text-sm text-gold-100/85">
                 <span>Need an account?</span>
                 <Link href="/signup" className="font-semibold text-gold-400 hover:text-gold-300 transition-colors">
                   Create one here
